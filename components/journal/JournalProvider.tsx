@@ -290,43 +290,49 @@ export default function JournalProvider({ children }: { children: React.ReactNod
     fetch("/api/accounts")
       .then((res) => res.json())
       .then((remoteList) => {
-        if (!Array.isArray(remoteList) || remoteList.length === 0) return;
+        const mappedRemote: TradingAccount[] = Array.isArray(remoteList)
+          ? remoteList
+              .filter((a: any) => a.id !== DEFAULT_JOURNAL_ACCOUNT.id && (a.name || a.account_name) !== "cTrader Demo 01")
+              .map((a: any) => ({
+                id: String(a.id),
+                name: String(a.name || a.account_name || "Account"),
+                broker: String(a.bank || a.bank_name || "cTrader"),
+                externalAccountId: a.note && a.note !== "Trading Journal Account" ? a.note : null,
+                baseCurrency: "USD",
+                reportingTimezone: "Asia/Bangkok",
+                defaultRiskAmount: a.openingBalance ? Number(a.openingBalance) : undefined,
+              }))
+          : [];
 
-        const mappedRemote: TradingAccount[] = remoteList.map((a: any) => ({
-          id: String(a.id),
-          name: String(a.name || a.account_name || "Account"),
-          broker: String(a.bank || a.bank_name || "cTrader"),
-          externalAccountId: a.note && a.note !== "Trading Journal Account" ? a.note : null,
-          baseCurrency: "USD",
-          reportingTimezone: "Asia/Bangkok",
-          defaultRiskAmount: a.openingBalance ? Number(a.openingBalance) : undefined,
-        }));
-
-        const currentAccounts = state.accounts;
         const currentTrades = state.trades;
-
-        // If local only has the placeholder ctrader-demo-01 with 0 trades and remote has custom accounts, replace it
-        const hasOnlyDefaultAccount =
-          currentAccounts.length === 1 &&
-          currentAccounts[0].id === DEFAULT_JOURNAL_ACCOUNT.id &&
-          !currentTrades.some((t) => t.accountId === DEFAULT_JOURNAL_ACCOUNT.id) &&
-          !mappedRemote.some((r) => r.id === DEFAULT_JOURNAL_ACCOUNT.id);
+        // Filter out any default placeholder account
+        const currentAccounts = state.accounts.filter(
+          (a) => a.id !== DEFAULT_JOURNAL_ACCOUNT.id && a.name !== "cTrader Demo 01"
+        );
 
         let nextAccounts: TradingAccount[];
         let nextActiveId = state.activeAccountId;
 
-        if (hasOnlyDefaultAccount) {
-          nextAccounts = mappedRemote;
-          nextActiveId = mappedRemote[0]?.id || "";
-        } else {
+        if (mappedRemote.length > 0) {
           const existingIds = new Set(currentAccounts.map((a) => a.id));
           const toAdd = mappedRemote.filter((r) => !existingIds.has(r.id));
-          if (toAdd.length === 0) return;
           nextAccounts = [...currentAccounts, ...toAdd];
-          if (!existingIds.has(nextActiveId)) {
+          if (!nextAccounts.some((a) => a.id === nextActiveId)) {
+            nextActiveId = nextAccounts[0]?.id || "";
+          }
+        } else {
+          nextAccounts = currentAccounts;
+          if (!nextAccounts.some((a) => a.id === nextActiveId)) {
             nextActiveId = nextAccounts[0]?.id || "";
           }
         }
+
+        const accountsChanged =
+          nextAccounts.length !== state.accounts.length ||
+          nextAccounts.some((a, i) => a.id !== state.accounts[i]?.id) ||
+          nextActiveId !== state.activeAccountId;
+
+        if (!accountsChanged) return;
 
         const semantic = validateJournalSnapshot({
           trades: currentTrades,
@@ -765,7 +771,14 @@ export default function JournalProvider({ children }: { children: React.ReactNod
   const activeAccount = useMemo(
     () => state.accounts.find((account) => account.id === state.activeAccountId)
       ?? state.accounts[0]
-      ?? normalizeTradingAccount({ ...DEFAULT_JOURNAL_ACCOUNT }),
+      ?? {
+          id: "",
+          name: "",
+          broker: "cTrader",
+          externalAccountId: null,
+          baseCurrency: "USD",
+          reportingTimezone: "Asia/Bangkok",
+        },
     [state.accounts, state.activeAccountId],
   );
 

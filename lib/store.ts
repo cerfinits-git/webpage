@@ -32,14 +32,16 @@ export async function readAccounts(userId?: string | null): Promise<Account[]> {
     }
     const { data, error } = await query;
     if (error || !data) return [];
-    return data.map((row: any) => ({
-      id: String(row.id),
-      name: String(row.account_name || row.name || ""),
-      bank: String(row.bank_name || row.bank || "cTrader"),
-      openingBalance: Number(row.balance ?? row.openingBalance ?? 0),
-      interestRate: Number(row.interest_rate ?? row.interestRate ?? 0),
-      note: row.note ? String(row.note) : undefined,
-    }));
+    return data
+      .filter((row: any) => row.id !== "ctrader-demo-01" && (row.account_name || row.name) !== "cTrader Demo 01")
+      .map((row: any) => ({
+        id: String(row.id),
+        name: String(row.account_name || row.name || ""),
+        bank: String(row.bank_name || row.bank || "cTrader"),
+        openingBalance: Number(row.balance ?? row.openingBalance ?? 0),
+        interestRate: Number(row.interest_rate ?? row.interestRate ?? 0),
+        note: row.note ? String(row.note) : undefined,
+      }));
   } catch (err) {
     console.error("Error reading accounts from Supabase:", err);
     return [];

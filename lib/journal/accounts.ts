@@ -61,23 +61,19 @@ export function validateTradingAccount(account: TradingAccount) {
 export function inferJournalAccounts(trades: JournalTrade[]) {
   const ids = [...new Set(trades.map((trade) => trade.accountId.trim()).filter(Boolean))]
     .sort((left, right) => left.localeCompare(right));
-  if (ids.length === 0) return [{ ...DEFAULT_JOURNAL_ACCOUNT }];
-  return ids.map((id): TradingAccount => id === DEFAULT_JOURNAL_ACCOUNT.id
-    ? { ...DEFAULT_JOURNAL_ACCOUNT }
-    : {
-        id,
-        name: id,
-        broker: "Unmapped",
-        externalAccountId: null,
-        baseCurrency: "USD",
-        reportingTimezone: "Asia/Bangkok",
-      });
+  if (ids.length === 0) return [];
+  return ids.map((id): TradingAccount => ({
+    id,
+    name: id,
+    broker: "cTrader",
+    externalAccountId: null,
+    baseCurrency: "USD",
+    reportingTimezone: "Asia/Bangkok",
+  }));
 }
 
 export function inferActiveAccountId(accounts: TradingAccount[]) {
-  return accounts.some((account) => account.id === DEFAULT_JOURNAL_ACCOUNT.id)
-    ? DEFAULT_JOURNAL_ACCOUNT.id
-    : accounts[0]?.id ?? DEFAULT_JOURNAL_ACCOUNT.id;
+  return accounts[0]?.id ?? "";
 }
 
 export function createJournalSnapshot(
