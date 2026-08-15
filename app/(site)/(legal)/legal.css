@@ -1,0 +1,285 @@
+/* หน้าเอกสาร: /privacy และ /unsubscribe
+   อ่านยาว จอแคบ ไม่มีของประดับ — ความกว้างบรรทัดสำคัญกว่าลูกเล่น */
+
+.site .legal-page {
+  padding: 64px 0 40px;
+}
+
+.site .legal-wrap {
+  max-width: 760px;
+}
+
+.site .legal-wrap-narrow {
+  max-width: 560px;
+}
+
+.site .legal-opener {
+  margin-bottom: 40px;
+}
+
+.site .legal-opener h1 {
+  font-family: var(--thai);
+  font-size: clamp(28px, 7vw, 42px);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 10px 0 16px;
+  color: var(--ink);
+}
+
+.site .legal-opener .lead {
+  font-size: max(var(--type-read), 16px);
+  line-height: 1.75;
+  color: var(--muted);
+  margin: 0;
+}
+
+.site .legal-block {
+  padding-top: 28px;
+  margin-top: 28px;
+  border-top: 1px solid var(--line);
+}
+
+.site .legal-block h2 {
+  font-family: var(--thai);
+  font-size: max(var(--type-floor), 20px);
+  font-weight: 500;
+  line-height: 1.4;
+  margin: 0 0 14px;
+  color: var(--ink);
+}
+
+.site .legal-block p {
+  font-size: max(var(--type-read), 15.5px);
+  line-height: 1.8;
+  color: var(--ink);
+  margin: 0 0 14px;
+}
+
+.site .legal-note {
+  font-size: max(var(--type-floor), 14px) !important;
+  line-height: 1.75 !important;
+  color: var(--muted) !important;
+  padding-left: 14px;
+  border-left: 2px solid var(--line);
+}
+
+.site .legal-list {
+  margin: 0 0 14px;
+  padding-left: 20px;
+}
+
+.site .legal-list li {
+  font-size: max(var(--type-read), 15.5px);
+  line-height: 1.8;
+  margin-bottom: 8px;
+}
+
+.site .legal-loc {
+  font-family: var(--mono);
+  font-size: max(var(--type-floor), 13px);
+  color: var(--muted);
+}
+
+.site .legal-dl {
+  margin: 0 0 14px;
+  display: grid;
+  gap: 12px;
+}
+
+.site .legal-dl > div {
+  display: grid;
+  gap: 2px;
+  padding: 12px 14px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+}
+
+.site .legal-dl dt {
+  font-family: var(--mono);
+  font-size: max(var(--type-floor), 11.5px);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.site .legal-dl dd {
+  margin: 0;
+  font-size: max(var(--type-read), 15.5px);
+  line-height: 1.7;
+  color: var(--ink);
+}
+
+/* ตารางกว้างกว่าจอมือถือเสมอ ให้มันเลื่อนในกล่องตัวเอง ไม่ใช่ดันทั้งหน้า */
+.site .legal-table-scroll {
+  overflow-x: auto;
+  margin: 0 0 16px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+}
+
+.site .legal-table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+}
+
+.site .legal-table th,
+.site .legal-table td {
+  padding: 12px 14px;
+  text-align: left;
+  vertical-align: top;
+  font-size: max(var(--type-floor), 14px);
+  line-height: 1.65;
+  border-bottom: 1px solid var(--line);
+}
+
+.site .legal-table th {
+  font-family: var(--mono);
+  font-size: max(var(--type-floor), 11.5px);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: var(--card);
+  white-space: nowrap;
+}
+
+.site .legal-table tr:last-child td {
+  border-bottom: none;
+}
+
+.site .legal-block-rights {
+  border-top-color: var(--gold);
+}
+
+.site .legal-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 0 16px;
+}
+
+.site .legal-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 11px 18px;
+  font-family: var(--thai);
+  font-size: max(var(--type-floor), 15px);
+  color: var(--bg);
+  background: var(--gold);
+  border: 1px solid var(--gold);
+  border-radius: 3px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.site .legal-btn:hover {
+  opacity: 0.88;
+}
+
+.site .legal-btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.site .legal-btn-ghost {
+  color: var(--ink);
+  background: transparent;
+  border-color: var(--line);
+}
+
+/* ── ฟอร์มยกเลิกรับอีเมล ── */
+
+.site .unsub-form {
+  display: grid;
+  gap: 10px;
+  padding: 22px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+}
+
+.site .unsub-label {
+  font-family: var(--mono);
+  font-size: max(var(--type-floor), 12px);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.site .unsub-form input[type="email"] {
+  width: 100%;
+  min-height: 44px;
+  padding: 11px 14px;
+  font-family: var(--thai);
+  font-size: max(var(--type-read), 16px); /* ต่ำกว่า 16px ทำให้ iOS ซูมเอง */
+  color: var(--ink);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+}
+
+.site .unsub-form input[type="email"]:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+
+.site .unsub-ok {
+  padding: 22px;
+  background: var(--panel);
+  border: 1px solid var(--gold);
+  border-radius: 3px;
+}
+
+.site .unsub-ok strong {
+  display: block;
+  font-size: max(var(--type-floor), 17px);
+  margin-bottom: 8px;
+  color: var(--ink);
+}
+
+.site .unsub-ok p {
+  font-size: max(var(--type-read), 15px);
+  line-height: 1.75;
+  color: var(--ink);
+  margin: 0 0 10px;
+}
+
+.site .unsub-note {
+  font-size: max(var(--type-floor), 13.5px) !important;
+  color: var(--muted) !important;
+}
+
+.site .unsub-err {
+  font-size: max(var(--type-floor), 14px);
+  color: var(--danger, #c66);
+}
+
+/* honeypot */
+.site .hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* แถบเตือนตอนยังกรอกชื่อผู้ควบคุมข้อมูลไม่ครบ — หายไปเองเมื่อกรอกแล้ว */
+.site .legal-todo {
+  padding: 14px 16px;
+  margin: 0 0 8px;
+  font-size: max(var(--type-floor), 14.5px) !important;
+  line-height: 1.7;
+  color: var(--ink) !important;
+  background: var(--gold-tint, var(--card));
+  border: 1px solid var(--gold);
+  border-radius: 3px;
+}
+
+.site .legal-todo code {
+  font-family: var(--mono);
+  font-size: max(var(--type-floor), 13px);
+}

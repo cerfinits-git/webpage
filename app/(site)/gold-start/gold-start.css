@@ -1,0 +1,259 @@
+/* ============================================================
+   GOLD START (book) — generated from Web Cerfinits gold-start.css
+   by scripts/convert-gold-start.mjs. Every selector lives under
+   .site .gs so nothing collides with globals.css or site.css.
+   Shared tokens come from globals.css; book overrides below.
+   ============================================================ */
+.site .gs {
+  --max: 1120px;
+  font-family: var(--thai);
+  font-weight: 400;
+  line-height: 1.95;
+  font-size: 17.5px;
+  padding: 0;
+}
+/* from gold-start.css — auto-scoped under .site .gs by scripts/convert-gold-start.mjs */
+.site .gs { background:var(--bg);color:var(--ink);font-family:var(--thai);
+  font-weight:400;line-height:1.95;-webkit-font-smoothing:antialiased;
+  font-size:16px;padding:0; }
+.site .gs .book { max-width:var(--max);margin: 40px auto;background:var(--panel);border:1px solid var(--line-soft); border-radius: 2px; box-shadow: 0 12px 40px rgba(0,0,0,0.04); min-height:calc(100vh - 80px); overflow: hidden; padding:0 clamp(20px,5vw,64px) }
+.site .gs .wrap { max-width:880px;margin:0 auto;padding:0; }
+.site .gs .runhead { display:flex;align-items:center;justify-content:space-between;height:64px;
+  border-bottom:1px solid var(--soft);
+  font-family:var(--mono);font-size: max(var(--type-floor), 11.5px);letter-spacing:.08em;color:var(--muted); }
+.site .gs .runhead .brand { display:flex;align-items:center;gap:8px;color:var(--ink);font-weight:500 }
+.site .gs .runhead .brand .dot { width:8px;height:8px;background:var(--ink) }
+.site .gs .opener { padding-top: 96px; padding-bottom: 64px; }
+.site .gs .kicker { display:inline-block;font-family:var(--mono);font-size: max(var(--type-floor), 12px);letter-spacing:.1em;
+  color:var(--muted);border:1px solid var(--line);padding:5px 13px;background:var(--card);
+  margin-bottom:38px;line-height:1.4; }
+.site .gs .chno { font-family:var(--mono);font-size: max(var(--type-floor), 13px);color:var(--gold);letter-spacing:.22em;margin-bottom:14px }
+.site .gs .opener h1, .site .gs .opener .chtitle { font-family:var(--thai);font-weight:600;line-height:1.22;letter-spacing:-.01em;
+  font-size:clamp(31px,5.6vw,48px);margin-bottom:30px; }
+.site .gs .lead { font-family:var(--thai);font-weight:300;font-size:clamp(17px,2.2vw,19.5px);
+  color:var(--muted);line-height:1.85;max-width:560px; }
+.site .gs .content { padding-top: 36px; padding-bottom: 84px; }
+.site .gs .content p { margin:0 0 32px;color:var(--ink);font-weight:400;line-height:1.85;font-size:16px;letter-spacing:-0.005em }
+.site .gs .content p.intro { font-size:19.5px;margin-bottom:40px;color:var(--ink);line-height:1.75 }
+.site .gs .sechead { display:flex;align-items:baseline;gap:16px;margin:84px 0 32px }
+.site .gs .sechead .n { font-family:var(--mono);font-size:14px;color:var(--gold);flex:none;padding-top:4px }
+.site .gs .sechead h2, .site .gs .sechead h3 { font-family:var(--thai);font-weight:600;font-size:clamp(26px,3.5vw,32px);letter-spacing:-.015em;line-height:1.3;color:var(--ink) }
+.site .gs .pull { border-left:3px solid var(--gold);background:linear-gradient(90deg, rgba(154,123,63,0.05) 0%, transparent 100%);padding:24px 32px;margin:56px 0;
+  font-family:var(--thai);font-weight:500;font-size:clamp(20px,2.5vw,24px);
+  line-height:1.62;letter-spacing:-.01em;color:var(--ink);border-radius:0 2px 2px 0 }
+.site .gs ul.clean { list-style:none;margin:10px 0 32px;padding:0 }
+.site .gs ul.clean li { position:relative;padding:11px 0 11px 32px;color:var(--ink);line-height:1.85 }
+.site .gs ul.clean li::before { content:"—";position:absolute;left:0;top:11px;color:var(--gold);font-family:var(--mono) }
+.site .gs ul.clean li b { font-weight:600;color:var(--ink) }
+.site .gs .equation { border:1px solid var(--line);background:var(--card);text-align:center;padding:44px 24px;margin:48px 0 }
+.site .gs .equation .eq { font-family:var(--mono);font-size:clamp(19px,3.2vw,27px);letter-spacing:.02em;color:var(--ink);line-height:1.4 }
+.site .gs .equation .eqs { font-family:var(--mono);font-size: max(var(--type-floor), 12px);color:var(--muted);margin-top:14px;letter-spacing:.04em }
+.site .gs .note { background:var(--btn);color:var(--btn-text);padding:46px 44px;margin:60px 0;border:1px solid var(--btn) }
+.site .gs .note .nlabel { font-family:var(--mono);font-size: max(var(--type-floor), 11.5px);letter-spacing:.14em;color:var(--muted);margin-bottom:20px }
+.site .gs .note p { margin:0 0 16px;color:var(--muted);font-weight:300;font-size:17px;line-height:1.85 }
+.site .gs .note p:last-child { margin-bottom:0 }
+.site .gs .note p b { color:var(--btn-text);font-weight:500 }
+.site .gs .summary { border:1px solid var(--line);background:var(--card);padding:42px 44px;margin:60px 0 }
+.site .gs .summary .slabel { font-family:var(--mono);font-size: max(var(--type-floor), 11.5px);letter-spacing:.12em;color:var(--muted);margin-bottom:22px }
+.site .gs .summary ul { list-style:none;margin:0;padding:0 }
+.site .gs .summary li { position:relative;padding:14px 0 14px 28px;border-top:1px solid var(--soft);color:var(--ink);font-size:16px;line-height:1.7 }
+.site .gs .summary li:first-child { border-top:0 }
+.site .gs .summary li::before { content:"›";position:absolute;left:2px;top:14px;color:var(--gold);font-family:var(--mono);font-weight:500 }
+.site .gs .checklist { margin:60px 0 }
+.site .gs .checklist .clabel { font-family:var(--mono);font-size: max(var(--type-floor), 11.5px);letter-spacing:.12em;color:var(--muted);margin-bottom:24px }
+.site .gs .checklist ul { list-style:none;margin:0;padding:0 }
+.site .gs .checklist li { position:relative;padding:17px 0 17px 40px;color:var(--ink);border-bottom:1px solid var(--soft);font-weight:400;line-height:1.7 }
+.site .gs .checklist li:last-child { border-bottom:0 }
+.site .gs .checklist li::before { content:"";position:absolute;left:0;top:19px;width:18px;height:18px;border:1.5px solid var(--ink);border-radius:2px;background:transparent }
+.site .gs .next { border-top:1px solid var(--line);margin-top:76px;padding:40px 0 10px }
+.site .gs .next .nx { font-family:var(--mono);font-size: max(var(--type-floor), 11.5px);letter-spacing:.1em;color:var(--gold);margin-bottom:16px }
+.site .gs .next p { font-family:var(--thai);font-weight:300;font-size:18px;color:var(--muted);margin:0;line-height:1.8 }
+.site .gs .next p b { font-weight:600;color:var(--ink) }
+.site .gs .bookfoot { border-top:1px solid var(--soft);padding:28px 0;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  font-family:var(--mono);font-size: max(var(--type-floor), 11px);letter-spacing:.06em;color:var(--muted); }
+.site .gs .disclaimer { border-top:1px solid var(--soft);padding:22px 0 44px;
+  font-family:var(--thai);font-size: max(var(--type-floor), 12.5px);color:var(--muted);font-weight: var(--w-soft);line-height:1.7; }
+.site .gs .drivers { margin:26px 0 10px;display:flex;flex-direction:column;gap:14px }
+.site .gs .driver { border:1px solid var(--line);background:var(--card);padding:22px 26px }
+.site .gs .driver .dk { font-family:var(--mono);font-size: max(var(--type-floor), 12px);letter-spacing:.05em;color:var(--muted);margin-bottom:13px }
+.site .gs .driver .dv { font-size:17px;color:var(--ink);font-weight:500;line-height:1.55 }
+.site .gs .driver .dnote { font-family:var(--mono);font-size: max(var(--type-floor), 11.5px);color:var(--muted);margin-top:11px }
+.site .gs .up { color:var(--up);font-weight:700 }
+.site .gs .down { color:var(--down);font-weight:700 }
+.site .gs .sessions { margin:28px 0 12px;display:flex;flex-direction:column;gap:20px }
+.site .gs .ses { display:grid;grid-template-columns:104px 1fr;gap:18px;align-items:start }
+.site .gs .ses .sk { font-family:var(--mono);font-size: max(var(--type-floor), 13px);color:var(--ink);font-weight:500;padding-top:1px }
+.site .gs .ses .strack { height:15px;background:var(--soft);border:1px solid var(--soft) }
+.site .gs .ses .sfill { display:block;height:100% }
+.site .gs .ses .st { font-family:var(--mono);font-size: max(var(--type-floor), 11.5px);color:var(--muted);margin-top:9px;letter-spacing:.02em }
+.site .gs .ses-note { border-left:2px solid var(--gold);padding:8px 0 8px 22px;margin:28px 0 10px;font-size:16px;color:var(--ink);line-height:1.72 }
+.site .gs .ses-note b { color:var(--ink);font-weight:600 }
+.site .gs .loop { border:1px solid rgba(154,123,63,.45);border-left:3px solid var(--gold);background:rgba(154,123,63,.08);padding:30px 32px;margin:46px 0 }
+.site .gs .loop .llabel { font-family:var(--mono);font-size: max(var(--type-floor), 11.5px);letter-spacing:.12em;color:var(--gold);margin-bottom:14px }
+.site .gs .loop p { margin:0;color:var(--ink);font-size:16.5px;line-height:1.78 }
+.site .gs .loop p b { color:var(--ink);font-weight:600 }
+.site .gs .warn { border:1px solid rgba(157,90,79,.4);background:rgba(157,90,79,.07);padding:28px 32px;margin:40px 0 }
+.site .gs .warn .wlabel { font-family:var(--mono);font-size: max(var(--type-floor), 11.5px);letter-spacing:.1em;color:var(--down);margin-bottom:13px }
+.site .gs .warn p { margin:0;color:var(--ink);font-size:15.5px;line-height:1.75 }
+.site .gs .warn p b { color:var(--ink);font-weight:600 }
+.site .gs .window { border:1px solid var(--line);background:var(--card);margin:30px 0;overflow:hidden }
+.site .gs .winbar { display:flex;align-items:center;gap:7px;padding:11px 15px;background:var(--card);border-bottom:1px solid var(--line) }
+.site .gs .winbar i { width:10px;height:10px;border-radius:50%;background:var(--line);display:block }
+.site .gs .winbar .wt { font-family:var(--mono);font-size: max(var(--type-floor), 11px);color:var(--muted);margin-left:10px }
+.site .gs .winbody { padding:26px 24px }
+.site .gs .fields { display:flex;flex-direction:column;gap:16px;margin:6px 0 }
+.site .gs .field .flabel { font-family:var(--mono);font-size: max(var(--type-floor), 11px);color:var(--muted);margin-bottom:7px;letter-spacing:.04em }
+.site .gs .field .fbox { border:1px solid var(--line);background:var(--panel);padding:11px 14px;font-size:14px;color:var(--ink) }
+.site .gs .field .fbox.ph { color:var(--muted) }
+.site .gs .fbtn { display:inline-block;background:var(--btn);color:var(--btn-text);font-family:var(--mono);font-size: max(var(--type-floor), 13px);padding:12px 22px;border-radius:2px;margin-top:4px }
+.site .gs .bcards { display:flex;flex-direction:column;gap:14px;margin:24px 0 10px }
+.site .gs .bcard { border:1px solid var(--line);background:var(--card);padding:22px 26px;display:grid;grid-template-columns:40px 1fr;gap:16px;align-items:start }
+.site .gs .bcard .brank { font-family:var(--mono);font-size:16px;color:var(--gold);padding-top:2px }
+.site .gs .bcard .bname { font-weight:600;color:var(--ink);font-size:17px;margin-bottom:7px }
+.site .gs .bcard .bwhy { color:var(--ink);font-size:15px;line-height:1.65 }
+.site .gs .bcard a.blink { display:inline-block;margin-top:13px;font-family:var(--mono);font-size: max(var(--type-floor), 12.5px);color:var(--gold);border-bottom:1px solid rgba(154,123,63,.45);padding-bottom:2px }
+.site .gs .bcard a.blink:hover { color:var(--ink);border-color:var(--ink) }
+.site .gs .specs { display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:28px 0 }
+.site .gs .spec { border:1px solid var(--line);background:var(--card);padding:22px }
+.site .gs .spec .sv { font-family:var(--mono);font-size:clamp(19px,3vw,25px);color:var(--ink);line-height:1.2 }
+.site .gs .spec .sl { font-size: max(var(--type-floor), 13.5px);color:var(--muted);margin-top:8px;font-weight: var(--w-soft);line-height:1.5 }
+.site .gs .quotebox { display:grid;grid-template-columns:1fr auto 1fr;border:1px solid var(--line);margin:28px 0;background:var(--card) }
+/* A grid item's default min-width is its content's min-content size, not 0 —
+   so the fr columns refused to shrink below "3,420.10" at full size and the
+   row overflowed .book by 18px on anything narrower than the price string.
+   min-width:0 lets the track actually take the size the grid gives it. */
+.site .gs .quotebox .qc { padding:22px 18px;text-align:center;min-width:0 }
+.site .gs .quotebox .ql { font-family:var(--mono);font-size: max(var(--type-floor), 11px);color:var(--muted);letter-spacing:.08em;margin-bottom:9px }
+.site .gs .quotebox .qp { font-family:var(--mono);font-size:clamp(20px,3.4vw,26px) }
+.site .gs .quotebox .qc.sell .qp { color:var(--down) }
+.site .gs .quotebox .qc.buy .qp { color:var(--up) }
+.site .gs .quotebox .qmid { padding:22px 16px;text-align:center;border-left:1px solid var(--line);border-right:1px solid var(--line);background:var(--panel) }
+.site .gs .quotebox .qmid .qp { color:var(--gold);font-size:clamp(16px,2.6vw,20px) }
+.site .gs .figure { border:1px solid var(--line);background:var(--card);padding:24px;margin:32px 0 }
+.site .gs .figure svg { display:block;width:100%;height:auto }
+.site .gs .figcap { font-family:var(--mono);font-size: max(var(--type-floor), 11.5px);color:var(--muted);margin-top:16px;letter-spacing:.03em;text-align:center }
+.site .gs .dtable { width:100%;border-collapse:collapse;margin:26px 0;font-size:14.5px;table-layout:auto }
+.site .gs .dtable th, .site .gs .dtable td { border:1px solid var(--line);padding:11px 14px;text-align:left;line-height:1.5;word-break:break-word }
+.site .gs .dtable th { font-family:var(--mono);font-size: max(var(--type-floor), 11.5px);letter-spacing:.04em;color:var(--muted);background:var(--card);font-weight:400 }
+.site .gs .dtable td { color:var(--ink) }
+.site .gs .dtable td.good { color:var(--up);font-weight:500 }
+.site .gs .dtable td.bad { color:var(--down);font-weight:500 }
+.site .gs .dtable .mono { font-family:var(--mono) }
+.site .gs .steps { display:flex;flex-direction:column;margin:26px 0 }
+.site .gs .step { display:grid;grid-template-columns:42px 1fr;gap:18px;padding:20px 0;border-top:1px solid var(--soft) }
+.site .gs .step:first-child { border-top:0 }
+.site .gs .step .snum { font-family:var(--mono);font-size: max(var(--type-floor), 13px);color:var(--btn-text);background:var(--btn);width:30px;height:30px;display:flex;align-items:center;justify-content:center;border-radius:2px }
+.site .gs .step .sb-title { font-weight:600;color:var(--ink);margin-bottom:6px }
+.site .gs .step .sb-text { color:var(--ink);font-size:15.5px;line-height:1.68 }
+.site .gs .ladder { display:flex;flex-direction:column;gap:10px;margin:30px 0 }
+.site .gs .rung { display:grid;grid-template-columns:96px 1fr;gap:18px;align-items:center;border:1px solid var(--line);background:var(--card);padding:18px 22px }
+.site .gs .rung .rp { font-family:var(--mono);font-size: max(var(--type-floor), 13.5px);color:var(--gold) }
+.site .gs .rung .rn { color:var(--ink);font-size:15.5px;line-height:1.5 }
+.site .gs .rung .rn b { color:var(--ink);font-weight:600 }
+.site .gs .rung.free { border-color:var(--ink);background:var(--panel) }
+.site .gs .rung.free .rp { color:var(--ink) }
+.site .gs .cta-final { border:1px solid var(--btn);background:var(--btn);color:var(--btn-text);padding:54px 44px;margin:56px 0 20px;text-align:center }
+.site .gs .cta-final h3 { font-family:var(--thai);font-weight:600;font-size:clamp(24px,3.6vw,32px);color:var(--btn-text);margin-bottom:14px;line-height:1.3 }
+.site .gs .cta-final p { color:var(--muted);font-weight:300;font-size:16px;max-width:460px;margin:0 auto 28px;line-height:1.7 }
+.site .gs .btnx { display:inline-flex;align-items:center;gap:9px;background:var(--bg);color:var(--ink);font-family:var(--mono);font-size:14px;padding:15px 30px;border-radius:2px }
+@media(max-width:560px) {
+.site .gs .specs { grid-template-columns:1fr }
+
+}
+@media print {
+.site .gs { background:#fff;padding:0;font-size:12pt;line-height:1.85 }
+.site .gs .book { max-width:none;border:0 }
+.site .gs .note, .site .gs .summary, .site .gs .checklist, .site .gs .pull, .site .gs .equation, .site .gs .next, .site .gs .drivers, .site .gs .sessions, .site .gs .ses-note, .site .gs .loop, .site .gs .warn, .site .gs .window, .site .gs .figure, .site .gs .bcard, .site .gs .spec, .site .gs .quotebox, .site .gs .dtable, .site .gs .step, .site .gs .rung, .site .gs .cta-final { break-inside:avoid }
+.site .gs .sechead { break-after:avoid }
+
+  @page{size:A4;margin:20mm 18mm}
+
+}
+/* from gold-start-index.html — auto-scoped under .site .gs by scripts/convert-gold-start.mjs */
+.site .gs .tl { display:grid;grid-template-columns:50px 1fr auto;gap:16px;align-items:center;padding:22px 24px;border:1px solid var(--line);background:var(--card);color:var(--ink);transition:all .3s var(--ease);border-radius:2px;margin-bottom:12px;text-decoration:none }
+.site .gs .tl:hover { border-color:var(--ink);box-shadow:0 6px 16px rgba(0,0,0,0.05);transform:translateY(-2px) }
+.site .gs .tl .tn { font-family:var(--mono);color:var(--btn-text);background:var(--btn);font-size: max(var(--type-floor), 13px);font-weight:600;display:flex;align-items:center;justify-content:center;height:32px;width:42px;border-radius:2px }
+.site .gs .tl .tt { font-weight:500;font-size:16.5px;letter-spacing:-0.01em;color:var(--ink) }
+.site .gs .tl .ta { color:var(--muted);font-family:var(--mono);transition:transform .2s;font-size:18px }
+.site .gs .tl:hover .ta { transform:translateX(4px);color:var(--ink) }
+.site .gs .tl-part { display:inline-block;font-family:var(--mono);font-size: max(var(--type-floor), 11.5px);letter-spacing:0.08em;color:var(--muted);background:var(--card);border:1px solid var(--line);padding:4px 12px;margin:48px 0 16px;border-radius:2px }
+.site .gs .tl-part:first-of-type { margin-top:24px }
+/* from gold-start-glossary.html — auto-scoped under .site .gs by scripts/convert-gold-start.mjs */
+.site .gs .dtable td:first-child { font-family:var(--mono);color:var(--ink);white-space:nowrap;width:34% }
+/* from gold-start-cheatsheet.html — auto-scoped under .site .gs by scripts/convert-gold-start.mjs */
+.site .gs .cs-content { padding:30px 0 48px }
+.site .gs .cs-grid { display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px }
+.site .gs .cs-box { border:1px solid var(--line);background:var(--card);padding:24px 26px }
+.site .gs .cs-box.full { grid-column:1 / -1 }
+.site .gs .cs-l { font-family:var(--mono);font-size: max(var(--type-floor), 11.5px);letter-spacing:.1em;color:var(--gold);margin-bottom:16px }
+.site .gs .cs-box ul { list-style:none;margin:0;padding:0 }
+.site .gs .cs-box li { position:relative;padding:9px 0 9px 32px;color:var(--ink);line-height:1.6;border-top:1px solid var(--soft) }
+.site .gs .cs-box li:first-child { border-top:0 }
+.site .gs .cs-box li::before { content:"";position:absolute;left:0;top:13px;width:15px;height:15px;border:1.5px solid var(--ink);border-radius:2px }
+.site .gs .cs-box.rule li::before, .site .gs .cs-box.no li::before { display:none }
+.site .gs .cs-box.rule li, .site .gs .cs-box.no li { padding-left:26px }
+.site .gs .cs-box.rule li::after { content:"›";position:absolute;left:2px;top:9px;color:var(--gold);font-family:var(--mono) }
+.site .gs .cs-box.no li::after { content:"✕";position:absolute;left:2px;top:9px;color:var(--down);font-family:var(--mono);font-weight:700 }
+.site .gs .cs-box .formula { font-family:var(--mono);font-size: max(var(--type-floor), 13.5px);color:var(--ink);line-height:1.9;background:var(--panel);border:1px solid var(--soft);padding:14px 16px;margin-top:6px }
+@media(max-width:620px) {
+.site .gs .cs-grid { grid-template-columns:1fr }
+
+}
+@media print {
+@page{size:A4;margin:14mm}
+
+}
+
+.site .gs .toc-part { font-family:var(--mono);font-size: max(var(--type-floor), 12px);letter-spacing:.08em;color:var(--gold);margin:30px 0 10px }
+.site .gs .toc ul.clean { margin:0 0 6px }
+.site .gs .toc ul.clean li { padding:7px 0 7px 32px }
+.site .gs .cover-hero { padding:80px 0 56px }
+.site .gs .cover-hero .big { font-family:var(--sans);font-weight:600;font-size:clamp(48px,11vw,104px);letter-spacing:-.04em;line-height:.95;margin:18px 0 22px }
+.site .gs .author { font-family:var(--mono);font-size: max(var(--type-floor), 13px);color:var(--muted);margin-top:8px }
+.site .gs .cs-content { padding:30px 0 48px }
+.site .gs .cs-grid { display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px }
+.site .gs .cs-box { border:1px solid var(--line);background:var(--card);padding:24px 26px }
+.site .gs .cs-box.full { grid-column:1 / -1 }
+.site .gs .cs-l { font-family:var(--mono);font-size: max(var(--type-floor), 11.5px);letter-spacing:.1em;color:var(--gold);margin-bottom:16px }
+.site .gs .cs-box ul { list-style:none;margin:0;padding:0 }
+.site .gs .cs-box li { position:relative;padding:9px 0 9px 32px;color:var(--ink);line-height:1.6;border-top:1px solid var(--soft) }
+.site .gs .cs-box li:first-child { border-top:0 }
+.site .gs .cs-box li::before { content:"";position:absolute;left:0;top:13px;width:15px;height:15px;border:1.5px solid var(--ink);border-radius:2px }
+.site .gs .cs-box.rule li::before, .site .gs .cs-box.no li::before { display:none }
+.site .gs .cs-box.rule li, .site .gs .cs-box.no li { padding-left:26px }
+.site .gs .cs-box.rule li::after { content:"›";position:absolute;left:2px;top:9px;color:var(--gold);font-family:var(--mono) }
+.site .gs .cs-box.no li::after { content:"✕";position:absolute;left:2px;top:9px;color:var(--down);font-family:var(--mono);font-weight:700 }
+.site .gs .cs-box .formula { font-family:var(--mono);font-size: max(var(--type-floor), 13.5px);color:var(--ink);line-height:1.9;background:var(--panel);border:1px solid var(--soft);padding:14px 16px;margin-top:6px }
+@media(max-width:620px) {
+.site .gs .cs-grid { grid-template-columns:1fr }
+
+}
+@media print {
+@page{size:A4;margin:14mm}
+
+}
+.site .gs .dtable td:first-child { font-family:var(--mono);color:var(--ink);white-space:nowrap;width:34% }
+@media print {
+.site .gs .book { break-before:page; }
+.site .gs .book:first-of-type { break-before:avoid; }
+
+}
+.site .gs .book + .book { margin-top:48px; }
+
+/* Phone tier: the chapter card's link rendered 30px tall and the back link to
+   the curriculum 27px, both under a thumb. */
+@media (max-width: 480px) {
+.site .gs .bcard a.blink { min-height:44px;display:inline-flex;align-items:center }
+.site .gs a.hover-gold { min-height:44px }
+
+/* .dtable td:first-child forces a nowrap 34%-wide first column, which is fine
+   for a short label but pushed the glossary's term/definition tables (e.g.
+   "Timeframe Alignment") past the .book edge — and .book clips overflow-x, so
+   that content wasn't scrollable, it was gone. Free the column to wrap and
+   the table settles inside its container by itself; no markup change needed
+   because every dtable in the book is plain two-cell rows, nothing that
+   depends on a fixed-width first column to read correctly. */
+.site .gs .dtable td:first-child { white-space:normal;width:auto }
+.site .gs .dtable th, .site .gs .dtable td { padding:9px 10px }
+}

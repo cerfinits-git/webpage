@@ -1,0 +1,144 @@
+{
+  "ticker": "WMT",
+  "period": "FY 2026",
+  "updatedAt": "2026-07-30",
+  "source": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000104169.json",
+  "revenue": [
+    {
+      "fiscalYear": 2022,
+      "value": 567762000000
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 605881000000
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 642637000000
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 674538000000
+    },
+    {
+      "fiscalYear": 2026,
+      "value": 706413000000
+    }
+  ],
+  "netProfit": [
+    {
+      "fiscalYear": 2022,
+      "value": 13673000000
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 11680000000
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 15511000000
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 19436000000
+    },
+    {
+      "fiscalYear": 2026,
+      "value": 21893000000
+    }
+  ],
+  "freeCashFlow": [
+    {
+      "fiscalYear": 2022,
+      "value": 11075000000
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 11984000000
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 15120000000
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 12660000000
+    },
+    {
+      "fiscalYear": 2026,
+      "value": 14923000000
+    }
+  ],
+  "eps": [
+    {
+      "fiscalYear": 2022,
+      "value": 1.62
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 1.42
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 1.91
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 2.41
+    },
+    {
+      "fiscalYear": 2026,
+      "value": 2.73
+    }
+  ],
+  "capex": [
+    {
+      "fiscalYear": 2022,
+      "value": 13106000000
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 16857000000
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 20606000000
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 23783000000
+    },
+    {
+      "fiscalYear": 2026,
+      "value": 26642000000
+    }
+  ],
+  "netDebt": 27439000000,
+  "operatingCashFlow": 41565000000,
+  "dividendPerShare": [
+    {
+      "fiscalYear": 2022,
+      "value": 0.7333
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 0.7467
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 0.76
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 0.83
+    },
+    {
+      "fiscalYear": 2026,
+      "value": 0.94
+    }
+  ],
+  "payoutRatio": 0.34289498926597545,
+  "sharesOutstanding": 7983000000,
+  "industry": "Retail-Variety Stores",
+  "dividendYield": null
+}

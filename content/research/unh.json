@@ -1,0 +1,144 @@
+{
+  "ticker": "UNH",
+  "period": "FY 2025",
+  "updatedAt": "2026-07-30",
+  "source": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000731766.json",
+  "revenue": [
+    {
+      "fiscalYear": 2021,
+      "value": 287597000000
+    },
+    {
+      "fiscalYear": 2022,
+      "value": 324162000000
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 371622000000
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 400278000000
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 447567000000
+    }
+  ],
+  "netProfit": [
+    {
+      "fiscalYear": 2021,
+      "value": 17285000000
+    },
+    {
+      "fiscalYear": 2022,
+      "value": 20120000000
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 22381000000
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 14405000000
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 12056000000
+    }
+  ],
+  "freeCashFlow": [
+    {
+      "fiscalYear": 2021,
+      "value": 19889000000
+    },
+    {
+      "fiscalYear": 2022,
+      "value": 23404000000
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 25682000000
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 20705000000
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 16075000000
+    }
+  ],
+  "eps": [
+    {
+      "fiscalYear": 2021,
+      "value": 18.08
+    },
+    {
+      "fiscalYear": 2022,
+      "value": 21.18
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 23.86
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 15.51
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 13.23
+    }
+  ],
+  "capex": [
+    {
+      "fiscalYear": 2021,
+      "value": 2454000000
+    },
+    {
+      "fiscalYear": 2022,
+      "value": 2802000000
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 3386000000
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 3499000000
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 3622000000
+    }
+  ],
+  "netDebt": 50268000000,
+  "operatingCashFlow": 19697000000,
+  "dividendPerShare": [
+    {
+      "fiscalYear": 2021,
+      "value": 5.6
+    },
+    {
+      "fiscalYear": 2022,
+      "value": 6.4
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 7.29
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 8.18
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 8.73
+    }
+  ],
+  "payoutRatio": 0.6566025215660252,
+  "sharesOutstanding": 908000000,
+  "industry": "Hospital & Medical Service Plans",
+  "dividendYield": null
+}

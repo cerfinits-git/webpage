@@ -1,0 +1,132 @@
+{
+  "ticker": "META",
+  "period": "FY 2025",
+  "updatedAt": "2026-07-23",
+  "source": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001326801.json",
+  "revenue": [
+    {
+      "fiscalYear": 2021,
+      "value": 117929000000
+    },
+    {
+      "fiscalYear": 2022,
+      "value": 116609000000
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 134902000000
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 164501000000
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 200966000000
+    }
+  ],
+  "netProfit": [
+    {
+      "fiscalYear": 2021,
+      "value": 39370000000
+    },
+    {
+      "fiscalYear": 2022,
+      "value": 23200000000
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 39098000000
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 62360000000
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 60458000000
+    }
+  ],
+  "freeCashFlow": [
+    {
+      "fiscalYear": 2021,
+      "value": 38993000000
+    },
+    {
+      "fiscalYear": 2022,
+      "value": 19289000000
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 44068000000
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 54072000000
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 46109000000
+    }
+  ],
+  "eps": [
+    {
+      "fiscalYear": 2021,
+      "value": 13.77
+    },
+    {
+      "fiscalYear": 2022,
+      "value": 8.59
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 14.87
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 23.86
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 23.49
+    }
+  ],
+  "capex": [
+    {
+      "fiscalYear": 2021,
+      "value": 18690000000
+    },
+    {
+      "fiscalYear": 2022,
+      "value": 31186000000
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 27045000000
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 37256000000
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 69691000000
+    }
+  ],
+  "netDebt": 22871000000,
+  "operatingCashFlow": 115800000000,
+  "dividendPerShare": [
+    {
+      "fiscalYear": 2024,
+      "value": 2
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 2.1
+    }
+  ],
+  "payoutRatio": 0.08806113334877105,
+  "sharesOutstanding": 2521000000,
+  "industry": "Services-Computer Programming, Data Processing, Etc.",
+  "dividendYield": null
+}

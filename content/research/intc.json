@@ -1,0 +1,136 @@
+{
+  "ticker": "INTC",
+  "period": "FY 2025",
+  "updatedAt": "2026-07-30",
+  "source": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000050863.json",
+  "revenue": [
+    {
+      "fiscalYear": 2021,
+      "value": 79024000000
+    },
+    {
+      "fiscalYear": 2022,
+      "value": 63054000000
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 54228000000
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 53101000000
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 52853000000
+    }
+  ],
+  "netProfit": [
+    {
+      "fiscalYear": 2021,
+      "value": 19868000000
+    },
+    {
+      "fiscalYear": 2022,
+      "value": 8014000000
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 1689000000
+    },
+    {
+      "fiscalYear": 2024,
+      "value": -18756000000
+    },
+    {
+      "fiscalYear": 2025,
+      "value": -267000000
+    }
+  ],
+  "freeCashFlow": [
+    {
+      "fiscalYear": 2021,
+      "value": 10723000000
+    },
+    {
+      "fiscalYear": 2022,
+      "value": -9411000000
+    },
+    {
+      "fiscalYear": 2023,
+      "value": -14279000000
+    },
+    {
+      "fiscalYear": 2024,
+      "value": -15656000000
+    },
+    {
+      "fiscalYear": 2025,
+      "value": -4949000000
+    }
+  ],
+  "eps": [
+    {
+      "fiscalYear": 2021,
+      "value": 4.86
+    },
+    {
+      "fiscalYear": 2022,
+      "value": 1.94
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 0.4
+    },
+    {
+      "fiscalYear": 2024,
+      "value": -4.38
+    },
+    {
+      "fiscalYear": 2025,
+      "value": -0.06
+    }
+  ],
+  "capex": [
+    {
+      "fiscalYear": 2021,
+      "value": 18733000000
+    },
+    {
+      "fiscalYear": 2022,
+      "value": 24844000000
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 25750000000
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 23944000000
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 14646000000
+    }
+  ],
+  "netDebt": 9169000000,
+  "operatingCashFlow": 9697000000,
+  "dividendPerShare": [
+    {
+      "fiscalYear": 2022,
+      "value": 1.46
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 0.74
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 0.38
+    }
+  ],
+  "payoutRatio": null,
+  "sharesOutstanding": 4530000000,
+  "industry": "Semiconductors & Related Devices",
+  "dividendYield": null
+}

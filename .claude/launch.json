@@ -1,0 +1,19 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "cerfinits-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "cwd": "C:\\Users\\narab\\cerfinits-plan",
+      "port": 3000
+    },
+    {
+      "name": "cerfinits-research",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--", "-p", "3007"],
+      "cwd": "C:\\Users\\narab\\cerfinits-plan",
+      "port": 3007
+    }
+  ]
+}

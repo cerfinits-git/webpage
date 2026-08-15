@@ -1,0 +1,136 @@
+{
+  "ticker": "NVDA",
+  "period": "FY 2026",
+  "updatedAt": "2026-07-30",
+  "source": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001045810.json",
+  "revenue": [
+    {
+      "fiscalYear": 2022,
+      "value": 26914000000
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 26974000000
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 60922000000
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 130497000000
+    },
+    {
+      "fiscalYear": 2026,
+      "value": 215938000000
+    }
+  ],
+  "netProfit": [
+    {
+      "fiscalYear": 2022,
+      "value": 9752000000
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 4368000000
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 29760000000
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 72880000000
+    },
+    {
+      "fiscalYear": 2026,
+      "value": 120067000000
+    }
+  ],
+  "freeCashFlow": [
+    {
+      "fiscalYear": 2022,
+      "value": 8132000000
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 3808000000
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 27021000000
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 60853000000
+    },
+    {
+      "fiscalYear": 2026,
+      "value": 96676000000
+    }
+  ],
+  "eps": [
+    {
+      "fiscalYear": 2023,
+      "value": 0.17
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 1.19
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 2.94
+    },
+    {
+      "fiscalYear": 2026,
+      "value": 4.9
+    }
+  ],
+  "capex": [
+    {
+      "fiscalYear": 2022,
+      "value": 976000000
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 1833000000
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 1069000000
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 3236000000
+    },
+    {
+      "fiscalYear": 2026,
+      "value": 6042000000
+    }
+  ],
+  "netDebt": -41657000000,
+  "operatingCashFlow": 102718000000,
+  "dividendPerShare": [
+    {
+      "fiscalYear": 2023,
+      "value": 0.016
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 0.016
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 0.034
+    },
+    {
+      "fiscalYear": 2026,
+      "value": 0.04
+    }
+  ],
+  "payoutRatio": 0.008112137389957273,
+  "sharesOutstanding": 24359000000,
+  "industry": "Semiconductors & Related Devices",
+  "dividendYield": null
+}

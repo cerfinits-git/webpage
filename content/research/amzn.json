@@ -1,0 +1,123 @@
+{
+  "ticker": "AMZN",
+  "period": "FY 2025",
+  "updatedAt": "2026-07-23",
+  "source": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001018724.json",
+  "revenue": [
+    {
+      "fiscalYear": 2021,
+      "value": 469822000000
+    },
+    {
+      "fiscalYear": 2022,
+      "value": 513983000000
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 574785000000
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 637959000000
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 716924000000
+    }
+  ],
+  "netProfit": [
+    {
+      "fiscalYear": 2021,
+      "value": 33364000000
+    },
+    {
+      "fiscalYear": 2022,
+      "value": -2722000000
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 30425000000
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 59248000000
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 77670000000
+    }
+  ],
+  "freeCashFlow": [
+    {
+      "fiscalYear": 2021,
+      "value": -14726000000
+    },
+    {
+      "fiscalYear": 2022,
+      "value": -16893000000
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 32217000000
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 32878000000
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 7695000000
+    }
+  ],
+  "eps": [
+    {
+      "fiscalYear": 2021,
+      "value": 3.24
+    },
+    {
+      "fiscalYear": 2022,
+      "value": -0.27
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 2.9
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 5.53
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 7.17
+    }
+  ],
+  "capex": [
+    {
+      "fiscalYear": 2021,
+      "value": 61053000000
+    },
+    {
+      "fiscalYear": 2022,
+      "value": 63645000000
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 52729000000
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 82999000000
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 131819000000
+    }
+  ],
+  "netDebt": -18414000000,
+  "operatingCashFlow": 139514000000,
+  "dividendPerShare": [],
+  "payoutRatio": null,
+  "sharesOutstanding": 10656000000,
+  "industry": "Retail-Catalog & Mail-Order Houses",
+  "dividendYield": null
+}

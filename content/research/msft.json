@@ -1,0 +1,144 @@
+{
+  "ticker": "MSFT",
+  "period": "FY 2026",
+  "updatedAt": "2026-07-30",
+  "source": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000789019.json",
+  "revenue": [
+    {
+      "fiscalYear": 2022,
+      "value": 198270000000
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 211915000000
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 245122000000
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 281724000000
+    },
+    {
+      "fiscalYear": 2026,
+      "value": 331839000000
+    }
+  ],
+  "netProfit": [
+    {
+      "fiscalYear": 2022,
+      "value": 72738000000
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 72361000000
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 88136000000
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 101832000000
+    },
+    {
+      "fiscalYear": 2026,
+      "value": 133749000000
+    }
+  ],
+  "freeCashFlow": [
+    {
+      "fiscalYear": 2022,
+      "value": 65149000000
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 59475000000
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 74071000000
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 71611000000
+    },
+    {
+      "fiscalYear": 2026,
+      "value": 66987000000
+    }
+  ],
+  "eps": [
+    {
+      "fiscalYear": 2022,
+      "value": 9.65
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 9.68
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 11.8
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 13.64
+    },
+    {
+      "fiscalYear": 2026,
+      "value": 17.95
+    }
+  ],
+  "capex": [
+    {
+      "fiscalYear": 2022,
+      "value": 23886000000
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 28107000000
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 44477000000
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 64551000000
+    },
+    {
+      "fiscalYear": 2026,
+      "value": 115948000000
+    }
+  ],
+  "netDebt": -36549000000,
+  "operatingCashFlow": 182935000000,
+  "dividendPerShare": [
+    {
+      "fiscalYear": 2022,
+      "value": 2.48
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 2.72
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 3
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 3.32
+    },
+    {
+      "fiscalYear": 2026,
+      "value": 3.64
+    }
+  ],
+  "payoutRatio": 0.19772110445685576,
+  "sharesOutstanding": 7429000000,
+  "industry": "Services-Prepackaged Software",
+  "dividendYield": null
+}

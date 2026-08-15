@@ -1,0 +1,30 @@
+{
+  "name": "cerfinits-plan",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "test": "node --test tests/journal/*.test.ts tests/research/*.test.ts tests/grade/*.test.ts tests/legal/*.test.ts",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.110.0",
+    "@claasahl/spotware-protobuf": "^91.0.2",
+    "@supabase/ssr": "0.12.0",
+    "@supabase/supabase-js": "2.110.2",
+    "next": "15.5.20",
+    "pbf": "^5.1.2",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "typescript": "^5"
+  },
+  "overrides": {
+    "postcss": "8.5.10"
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "ticker": "AAPL",
+  "period": "FY 2025",
+  "updatedAt": "2026-07-23",
+  "source": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json",
+  "revenue": [
+    {
+      "fiscalYear": 2021,
+      "value": 365817000000
+    },
+    {
+      "fiscalYear": 2022,
+      "value": 394328000000
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 383285000000
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 391035000000
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 416161000000
+    }
+  ],
+  "netProfit": [
+    {
+      "fiscalYear": 2021,
+      "value": 94680000000
+    },
+    {
+      "fiscalYear": 2022,
+      "value": 99803000000
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 96995000000
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 93736000000
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 112010000000
+    }
+  ],
+  "freeCashFlow": [
+    {
+      "fiscalYear": 2021,
+      "value": 92953000000
+    },
+    {
+      "fiscalYear": 2022,
+      "value": 111443000000
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 99584000000
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 108807000000
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 98767000000
+    }
+  ],
+  "eps": [
+    {
+      "fiscalYear": 2021,
+      "value": 5.61
+    },
+    {
+      "fiscalYear": 2022,
+      "value": 6.11
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 6.13
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 6.08
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 7.46
+    }
+  ],
+  "capex": [
+    {
+      "fiscalYear": 2021,
+      "value": 11085000000
+    },
+    {
+      "fiscalYear": 2022,
+      "value": 10708000000
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 10959000000
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 9447000000
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 12715000000
+    }
+  ],
+  "netDebt": 54744000000,
+  "operatingCashFlow": 111482000000,
+  "dividendPerShare": [
+    {
+      "fiscalYear": 2021,
+      "value": 0.85
+    },
+    {
+      "fiscalYear": 2022,
+      "value": 0.9
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 0.94
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 0.98
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 1.02
+    }
+  ],
+  "payoutRatio": 0.1376752075707526,
+  "sharesOutstanding": 14948500000,
+  "industry": "Electronic Computers",
+  "dividendYield": null
+}

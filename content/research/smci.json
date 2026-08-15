@@ -1,0 +1,119 @@
+{
+  "ticker": "SMCI",
+  "period": "FY 2025",
+  "updatedAt": "2026-07-23",
+  "source": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001375365.json",
+  "revenue": [
+    {
+      "fiscalYear": 2021,
+      "value": 3557422000
+    },
+    {
+      "fiscalYear": 2022,
+      "value": 5196099000
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 7123482000
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 14989251000
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 21972042000
+    }
+  ],
+  "netProfit": [
+    {
+      "fiscalYear": 2021,
+      "value": 111865000
+    },
+    {
+      "fiscalYear": 2022,
+      "value": 285163000
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 639998000
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 1152666000
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 1048854000
+    }
+  ],
+  "freeCashFlow": [
+    {
+      "fiscalYear": 2021,
+      "value": 64939000
+    },
+    {
+      "fiscalYear": 2022,
+      "value": -485983000
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 626787000
+    },
+    {
+      "fiscalYear": 2024,
+      "value": -2610251000
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 1532310000
+    }
+  ],
+  "eps": [
+    {
+      "fiscalYear": 2022,
+      "value": 0.53
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 1.14
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 1.92
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 1.68
+    }
+  ],
+  "capex": [
+    {
+      "fiscalYear": 2021,
+      "value": 58016000
+    },
+    {
+      "fiscalYear": 2022,
+      "value": 45182000
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 36793000
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 124279000
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 127214000
+    }
+  ],
+  "netDebt": -4888285000,
+  "operatingCashFlow": 1659524000,
+  "dividendPerShare": [],
+  "payoutRatio": null,
+  "sharesOutstanding": 593665000,
+  "industry": "Electronic Computers",
+  "dividendYield": null
+}

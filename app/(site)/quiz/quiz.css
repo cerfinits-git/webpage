@@ -1,0 +1,733 @@
+/* Trader Archetype Quiz — /quiz
+   หน้าสาธารณะ เข้ามาจากลิงก์ IG เป็นหลัก จึงออกแบบมือถือก่อน
+   ใช้เฉพาะตัวแปรสีจาก globals.css เพื่อให้สลับธีมสว่าง/มืดได้เอง */
+
+.quiz-page {
+  padding: 90px 0 60px;
+}
+
+.quiz-wrap {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ── หัวหน้า ───────────────────────────────────────────── */
+
+.quiz-opener .kicker {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: max(var(--type-floor), 12px);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+
+.quiz-opener h1 {
+  font-family: var(--thai);
+  font-size: clamp(28px, 7vw, 40px);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin: 0 0 16px;
+  color: var(--ink);
+}
+
+.quiz-opener .lead {
+  font-family: var(--thai);
+  font-size: max(var(--type-read), 16px);
+  line-height: 1.75;
+  font-weight: var(--w-soft);
+  color: var(--ink);
+  margin: 0 0 14px;
+}
+
+.quiz-opener .lead b {
+  font-weight: 600;
+}
+
+/* สรุปสี่แกนบนหน้าเปิด — บอกล่วงหน้าว่ารหัส 4 ตัวมาจากอะไร */
+.quiz-axis-list {
+  list-style: none;
+  margin: 0 0 18px;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.quiz-axis-list li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4px 12px;
+  align-items: baseline;
+  padding: 10px 12px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+}
+
+.quiz-axis-codes {
+  font-family: var(--mono);
+  font-size: max(var(--type-floor), 12.5px);
+  color: var(--gold);
+  white-space: nowrap;
+}
+
+.quiz-axis-name {
+  font-family: var(--thai);
+  font-size: max(var(--type-floor), 14.5px);
+  color: var(--ink);
+}
+
+.quiz-axis-poles {
+  grid-column: 2;
+  font-family: var(--thai);
+  font-size: max(var(--type-floor), 13px);
+  color: var(--muted);
+}
+
+.quiz-honest {
+  font-family: var(--thai);
+  font-size: max(var(--type-floor), 14px);
+  line-height: 1.7;
+  color: var(--muted);
+  margin: 0;
+  padding: 14px 16px;
+  background: var(--panel);
+  border-left: 2px solid var(--gold);
+}
+
+/* ── ตัวแบบทดสอบ ──────────────────────────────────────── */
+
+.aq {
+  margin: 38px 0;
+}
+
+.aq-progress {
+  margin-bottom: 26px;
+}
+
+.aq-progress-text {
+  display: block;
+  font-family: var(--mono);
+  font-size: max(var(--type-floor), 12px);
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.aq-progress-bar {
+  display: block;
+  height: 2px;
+  background: var(--soft);
+}
+
+.aq-progress-bar > span {
+  display: block;
+  height: 100%;
+  background: var(--ink);
+  transition: width 0.4s var(--ease);
+}
+
+.aq-q-setup {
+  font-family: var(--thai);
+  font-size: max(var(--type-floor), 14.5px);
+  line-height: 1.7;
+  color: var(--muted);
+  margin: 0 0 10px;
+}
+
+.aq-q-prompt {
+  font-family: var(--thai);
+  font-size: clamp(20px, 5vw, 25px);
+  line-height: 1.4;
+  margin: 0 0 20px;
+  color: var(--ink);
+}
+
+.aq-choices {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.aq-choice {
+  /* 52px ขั้นต่ำ เพื่อให้กดด้วยนิ้วโป้งได้ตามการตรวจมือถือ 2026-07-31 */
+  min-height: 52px;
+  text-align: left;
+  font-family: var(--thai);
+  font-size: max(var(--type-floor), 15px);
+  line-height: 1.55;
+  color: var(--ink);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 14px 16px;
+  cursor: pointer;
+  transition: border-color 0.2s, transform 0.15s var(--ease);
+}
+
+.aq-choice:hover {
+  border-color: var(--ink);
+}
+
+.aq-choice:active {
+  transform: scale(0.99);
+}
+
+.aq-btn {
+  min-height: 48px;
+  font-family: var(--thai);
+  font-size: max(var(--type-floor), 14.5px);
+  padding: 12px 22px;
+  background: var(--btn);
+  color: var(--btn-text);
+  border: 1px solid var(--btn);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.aq-btn:hover {
+  opacity: 0.85;
+}
+
+.aq-btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.aq-btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.aq-btn-plain {
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  padding: 12px 4px;
+}
+
+/* ── ผลลัพธ์ ───────────────────────────────────────────── */
+
+.aq-result {
+  margin: 32px 0;
+}
+
+.aq-card {
+  /* เท่ากับสัดส่วนของกรอบ และเป็นสัดส่วนที่โพสต์ลงฟีดได้โดยไม่ต้องครอป */
+  position: relative;
+  aspect-ratio: 2 / 3;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  border-radius: 3px;
+  /* การ์ดเป็นวัตถุสว่างวางบนพื้นมืด เงาคือสิ่งที่ทำให้มันดูเป็นของจริง */
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+}
+
+.aq-card[data-frame="green"] {
+  background-image: url("/quiz/frames/green.webp");
+}
+.aq-card[data-frame="purple"] {
+  background-image: url("/quiz/frames/purple.webp");
+}
+.aq-card[data-frame="navy"] {
+  background-image: url("/quiz/frames/navy.webp");
+}
+.aq-card[data-frame="gold"] {
+  background-image: url("/quiz/frames/gold.webp");
+}
+
+/* พื้นในกรอบเป็นกระดาษสีครีมเสมอ ไม่ว่าเว็บจะอยู่ธีมไหน สีตัวอักษรบนการ์ดจึง
+   ต้องเป็นค่าคงที่ ห้ามใช้ตัวแปรธีมที่พลิกตามโหมดมืด */
+.aq-card-code {
+  position: absolute;
+  top: 7.5%;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  gap: clamp(12px, 4vw, 20px);
+}
+
+/* ตัวอักษรล้วน ไม่มีกล่องครอบ — กล่องทำให้อ่านเหมือนช่องกรอกฟอร์ม และตัดจังหวะ
+   ของลายกรอบที่อยู่ข้างหลัง */
+.aq-card-code > span {
+  font-family: var(--mono);
+  font-size: clamp(30px, 9vw, 44px);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: #3d3116;
+  text-shadow: 0 1px 0 rgba(255, 253, 246, 0.7);
+}
+
+/* ตัวละครยืนเต็มการ์ด ครึ่งล่างจมเข้าไปในฉากไล่เฉด ทำให้ชื่อลอยขึ้นมาเป็นตัวเอก
+   โดยที่ยังเห็นว่าเป็นภาพเต็มตัว */
+.aq-card-art {
+  position: absolute;
+  left: 9%;
+  right: 9%;
+  /* ต้องมากกว่า bottom ของ .aq-card-body เสมอ ไม่งั้นเท้าจะยื่นต่ำกว่าปลายทึบ
+     ของฉากไล่เฉดแล้วโผล่ใต้บรรทัด URL — ภาพทั้ง 16 ใบวางเท้าไว้ที่ขอบล่างของ
+     ไฟล์พอดี (ช่องว่าง 0px) จึงพลาดพร้อมกันทุกใบ */
+  bottom: 10%;
+  top: 15%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.aq-card-art img {
+  display: block;
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: bottom center;
+  filter: drop-shadow(0 6px 14px rgba(60, 44, 18, 0.32));
+}
+
+/* ฉากไล่เฉดสีกระดาษพาดครึ่งล่างของตัวละคร ให้ชื่ออ่านออกเสมอและตัวละครดูจมอยู่
+   ในกระดาษ ไม่ใช่ลอยอยู่ข้างหน้า
+   ไล่ยาวและมีหลายจุดหยุด เพื่อไม่ให้เห็นเป็นสี่เหลี่ยมทึบขอบคม — เวอร์ชันก่อน
+   จางแค่ช่วงสั้น ๆ ตาจึงจับขอบบนของบล็อกได้ */
+.aq-card-body {
+  position: absolute;
+  left: 9%;
+  right: 9%;
+  bottom: 6.5%;
+  z-index: 2;
+  padding-top: 130px;
+  text-align: center;
+  background: linear-gradient(
+    to top,
+    rgba(240, 232, 214, 1) 0%,
+    rgba(240, 232, 214, 0.99) 32%,
+    rgba(240, 232, 214, 0.94) 48%,
+    rgba(240, 232, 214, 0.82) 61%,
+    rgba(240, 232, 214, 0.6) 72%,
+    rgba(240, 232, 214, 0.35) 82%,
+    rgba(240, 232, 214, 0.15) 91%,
+    rgba(240, 232, 214, 0) 100%
+  );
+}
+
+.aq-card-body h2 {
+  font-family: var(--thai);
+  font-size: clamp(26px, 7.5vw, 36px);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin: 0;
+  color: #2f2618;
+}
+
+.aq-card-en {
+  display: block;
+  font-family: var(--mono);
+  font-size: max(var(--type-floor), 12.5px);
+  letter-spacing: 0.04em;
+  color: #7a5c22;
+  margin-top: 5px;
+}
+
+.aq-card-tag {
+  font-family: var(--thai);
+  font-size: max(var(--type-floor), 14.5px);
+  line-height: 1.6;
+  font-weight: var(--w-soft);
+  color: #4a3f2c;
+  margin: 10px auto 0;
+  max-width: 30ch;
+}
+
+/* ที่อยู่เว็บบนการ์ด — คนที่เห็นภาพนี้ต่อจากการแชร์ต้องรู้ว่าไปทำได้ที่ไหน
+   โดยไม่ต้องถามเจ้าของโพสต์ */
+.aq-card-mark {
+  display: block;
+  font-family: var(--mono);
+  font-size: max(var(--type-floor), 11px);
+  letter-spacing: 0.08em;
+  color: #8a7550;
+  margin-top: 12px;
+}
+
+/* แถบสเกลสี่แกน */
+
+.aq-axes {
+  display: grid;
+  gap: 24px;
+  margin: 28px 0;
+}
+
+.aq-axis-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.aq-axis-title {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  font-family: var(--thai);
+  font-size: max(var(--type-floor), 14.5px);
+  color: var(--ink);
+}
+
+.aq-axis-letter {
+  font-family: var(--mono);
+  font-size: max(var(--type-floor), 12px);
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  border-radius: 2px;
+  padding: 1px 5px;
+}
+
+.aq-axis-flag {
+  font-family: var(--mono);
+  font-size: max(var(--type-floor), 11px);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  border-radius: 2px;
+  padding: 2px 6px;
+  white-space: nowrap;
+}
+
+.aq-axis-track {
+  position: relative;
+  height: 3px;
+  background: var(--soft);
+}
+
+.aq-axis-mid {
+  position: absolute;
+  left: 50%;
+  top: -4px;
+  width: 1px;
+  height: 11px;
+  background: var(--line);
+}
+
+.aq-axis-dot {
+  position: absolute;
+  top: 50%;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--ink);
+  transform: translate(-50%, -50%);
+}
+
+.aq-axis-ends {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 9px;
+  font-family: var(--mono);
+  font-size: max(var(--type-floor), 12px);
+  color: var(--muted);
+}
+
+.aq-axis-ends .on {
+  color: var(--ink);
+}
+
+.aq-borderline {
+  font-family: var(--thai);
+  font-size: max(var(--type-floor), 14px);
+  line-height: 1.7;
+  color: var(--ink);
+  background: var(--card);
+  border-left: 2px solid var(--gold);
+  padding: 14px 16px;
+  margin: 0 0 28px;
+}
+
+/* บล็อกเนื้อหา */
+
+.aq-block {
+  margin: 0 0 26px;
+  padding-bottom: 26px;
+  border-bottom: 1px solid var(--soft);
+}
+
+.aq-block h3 {
+  font-family: var(--thai);
+  font-size: max(var(--type-floor), 17px);
+  margin: 0 0 10px;
+  color: var(--ink);
+}
+
+.aq-block p {
+  font-family: var(--thai);
+  font-size: max(var(--type-read), 15.5px);
+  line-height: 1.78;
+  font-weight: var(--w-soft);
+  color: var(--ink);
+  margin: 0 0 10px;
+}
+
+.aq-block-sub {
+  color: var(--muted) !important;
+  font-size: max(var(--type-floor), 14px) !important;
+}
+
+.aq-block-weak h3 {
+  color: var(--down);
+}
+
+.aq-evidence {
+  font-size: max(var(--type-floor), 14px) !important;
+  color: var(--muted) !important;
+  background: var(--panel);
+  padding: 13px 15px;
+  margin: 14px 0 0 !important;
+}
+
+.aq-evidence span {
+  display: block;
+  font-family: var(--mono);
+  font-size: max(var(--type-floor), 11px);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gold);
+  margin-bottom: 5px;
+}
+
+/* บทเรียนที่แนะนำ */
+
+.aq-chapters {
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.aq-chapters li {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 14px 16px;
+}
+
+.aq-chapters a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* 44px ขั้นต่ำตามเกณฑ์พื้นที่กดของโปรเจกต์ — การ์ดรอบนอกใหญ่กว่านี้
+     แต่พื้นที่ที่กดได้จริงคือตัวลิงก์ ไม่ใช่การ์ด */
+  min-height: 44px;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.aq-chapters a:hover .aq-ch-t {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.aq-ch-n {
+  font-family: var(--mono);
+  font-size: max(var(--type-floor), 12px);
+  color: var(--gold);
+  flex: 0 0 auto;
+}
+
+.aq-ch-t {
+  font-family: var(--thai);
+  font-size: max(var(--type-floor), 15.5px);
+  font-weight: 500;
+}
+
+.aq-ch-why {
+  display: block;
+  font-family: var(--thai);
+  font-size: max(var(--type-floor), 13.5px);
+  line-height: 1.65;
+  color: var(--muted);
+  margin-top: 7px;
+}
+
+/* เก็บอีเมล */
+
+.aq-mail {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 22px 18px;
+  margin: 0 0 26px;
+}
+
+.aq-mail strong {
+  display: block;
+  font-family: var(--thai);
+  font-size: max(var(--type-floor), 17px);
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+.aq-mail p {
+  font-family: var(--thai);
+  font-size: max(var(--type-floor), 14.5px);
+  line-height: 1.7;
+  color: var(--muted);
+  margin: 0 0 14px;
+}
+
+.aq-mail-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.aq-mail-form input[type="email"] {
+  min-height: 50px;
+  font-family: var(--thai);
+  font-size: max(var(--type-floor), 15px);
+  padding: 13px 15px;
+  background: var(--bg);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+}
+
+.aq-mail-note {
+  font-size: max(var(--type-floor), 12.5px) !important;
+  margin: 12px 0 0 !important;
+}
+
+.aq-mail-err {
+  color: var(--down) !important;
+  margin: 10px 0 0 !important;
+}
+
+.aq-mail-ok {
+  border-left: 2px solid var(--up);
+}
+
+@media (min-width: 560px) {
+  .aq-mail-form {
+    flex-direction: row;
+  }
+
+  .aq-mail-form input[type="email"] {
+    flex: 1;
+  }
+}
+
+/* ท้ายผลลัพธ์ */
+
+.aq-after {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.aq-disclaim {
+  font-family: var(--thai);
+  font-size: max(var(--type-floor), 13px);
+  line-height: 1.7;
+  color: var(--muted);
+  border-top: 1px solid var(--soft);
+  padding-top: 16px;
+  margin: 0;
+}
+
+/* ── ที่มาของแบบทดสอบ ─────────────────────────────────── */
+
+.quiz-basis {
+  margin-top: 46px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+
+.quiz-basis h2 {
+  font-family: var(--thai);
+  font-size: max(var(--type-floor), 19px);
+  margin: 0 0 14px;
+  color: var(--ink);
+}
+
+.quiz-basis p {
+  font-family: var(--thai);
+  font-size: max(var(--type-floor), 14.5px);
+  line-height: 1.78;
+  font-weight: var(--w-soft);
+  color: var(--muted);
+  margin: 0 0 12px;
+}
+
+.quiz-basis p b {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.quiz-axes-basis {
+  display: grid;
+  gap: 16px;
+  margin: 20px 0 0;
+}
+
+.quiz-axes-basis dt {
+  font-family: var(--thai);
+  font-size: max(var(--type-floor), 14.5px);
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+.quiz-axes-basis dd {
+  font-family: var(--thai);
+  font-size: max(var(--type-floor), 13.5px);
+  line-height: 1.7;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* ปุ่มแชร์ใต้การ์ด — ทางออกหลักของทั้งฟีเจอร์ คนที่ทำเสร็จแล้วต้องส่งต่อได้
+   ในคลิกเดียว ไม่ใช่ต้องแคปแล้วครอปเอง */
+.aq-share {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin: 22px 0 4px;
+  text-align: center;
+}
+
+.aq-share .aq-btn {
+  min-width: 220px;
+}
+
+.aq-share-note {
+  font-family: var(--thai);
+  font-size: max(var(--type-floor), 13px);
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: 34ch;
+}
+
+.aq-share-err {
+  font-family: var(--thai);
+  font-size: max(var(--type-floor), 13.5px);
+  color: var(--danger, #c66);
+  margin: 0;
+}

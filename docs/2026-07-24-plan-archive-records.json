@@ -1,0 +1,106 @@
+{
+  "exportedAt": "2026-07-24",
+  "reason": "R8 of the research-platform pivot — /plan archived; its 8 live records exported before the routes were removed.",
+  "source": "data/transactions.json + data/goals.json (file-backed store standing in for Supabase; these were the seed/sample records, not real personal finance data).",
+  "counts": {
+    "transactions": 6,
+    "goals": 2
+  },
+  "transactions": [
+    {
+      "id": "t1",
+      "assetType": "stock",
+      "symbol": "VOO",
+      "name": "VOO · ETF",
+      "side": "buy",
+      "quantity": 6,
+      "price": 450,
+      "currency": "USD",
+      "fee": 0,
+      "tradedAt": "2024-05-10"
+    },
+    {
+      "id": "t2",
+      "assetType": "stock",
+      "symbol": "VOO",
+      "name": "VOO · ETF",
+      "side": "buy",
+      "quantity": 6,
+      "price": 510,
+      "currency": "USD",
+      "fee": 0,
+      "tradedAt": "2025-02-14"
+    },
+    {
+      "id": "t3",
+      "assetType": "crypto",
+      "symbol": "BTC",
+      "name": "BTC · crypto",
+      "side": "buy",
+      "quantity": 0.15,
+      "price": 58200,
+      "currency": "USD",
+      "fee": 0,
+      "tradedAt": "2024-11-02"
+    },
+    {
+      "id": "t4",
+      "assetType": "crypto",
+      "symbol": "ETH",
+      "name": "ETH · crypto",
+      "side": "buy",
+      "quantity": 1.2,
+      "price": 3244,
+      "currency": "USD",
+      "fee": 0,
+      "tradedAt": "2025-06-20"
+    },
+    {
+      "id": "t5",
+      "assetType": "gold",
+      "symbol": "GOLD96.5",
+      "name": "ทองคำ 96.5%",
+      "side": "buy",
+      "quantity": 6,
+      "price": 38900,
+      "currency": "THB",
+      "fee": 0,
+      "tradedAt": "2024-08-01",
+      "unitLabel": "บาท"
+    },
+    {
+      "id": "t6",
+      "assetType": "gold",
+      "symbol": "GOLD96.5",
+      "name": "ทองคำ 96.5%",
+      "side": "sell",
+      "quantity": 1,
+      "price": 40200,
+      "currency": "THB",
+      "fee": 0,
+      "tradedAt": "2025-03-05",
+      "unitLabel": "บาท"
+    }
+  ],
+  "goals": [
+    {
+      "id": "g1",
+      "name": "เกษียณอายุ",
+      "targetAmount": 15000000,
+      "targetYear": 2046,
+      "monthlySaving": 20000,
+      "expectedReturn": 0.07,
+      "linkedToPortfolio": true
+    },
+    {
+      "id": "g2",
+      "name": "เงินสำรองฉุกเฉิน",
+      "targetAmount": 300000,
+      "targetYear": 2027,
+      "monthlySaving": 10000,
+      "expectedReturn": 0.02,
+      "linkedToPortfolio": false,
+      "currentAmount": 240000
+    }
+  ]
+}

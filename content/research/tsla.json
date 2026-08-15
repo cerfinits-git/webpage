@@ -1,0 +1,123 @@
+{
+  "ticker": "TSLA",
+  "period": "FY 2025",
+  "updatedAt": "2026-07-30",
+  "source": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001318605.json",
+  "revenue": [
+    {
+      "fiscalYear": 2021,
+      "value": 53823000000
+    },
+    {
+      "fiscalYear": 2022,
+      "value": 81462000000
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 96773000000
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 97690000000
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 94827000000
+    }
+  ],
+  "netProfit": [
+    {
+      "fiscalYear": 2021,
+      "value": 5519000000
+    },
+    {
+      "fiscalYear": 2022,
+      "value": 12556000000
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 14997000000
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 7091000000
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 3794000000
+    }
+  ],
+  "freeCashFlow": [
+    {
+      "fiscalYear": 2021,
+      "value": 5015000000
+    },
+    {
+      "fiscalYear": 2022,
+      "value": 7566000000
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 4357000000
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 3581000000
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 6220000000
+    }
+  ],
+  "eps": [
+    {
+      "fiscalYear": 2021,
+      "value": 1.63
+    },
+    {
+      "fiscalYear": 2022,
+      "value": 3.62
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 4.3
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 2.04
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 1.08
+    }
+  ],
+  "capex": [
+    {
+      "fiscalYear": 2021,
+      "value": 6482000000
+    },
+    {
+      "fiscalYear": 2022,
+      "value": 7158000000
+    },
+    {
+      "fiscalYear": 2023,
+      "value": 8899000000
+    },
+    {
+      "fiscalYear": 2024,
+      "value": 11342000000
+    },
+    {
+      "fiscalYear": 2025,
+      "value": 8527000000
+    }
+  ],
+  "netDebt": -35906000000,
+  "operatingCashFlow": 14747000000,
+  "dividendPerShare": [],
+  "payoutRatio": null,
+  "sharesOutstanding": 3225000000,
+  "industry": "Motor Vehicles & Passenger Car Bodies",
+  "dividendYield": null
+}

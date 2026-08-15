@@ -1,0 +1,439 @@
+/* Plan shell — side rail matching the Journal layout so
+   the two halves of the app are navigated and structured the same way. */
+
+.plan-app {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  min-height: 100vh;
+  background: var(--bg, #201f1d);
+  color: var(--ink, #f5f5f7);
+  font-family: var(--thai);
+}
+
+.p-sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 28px 18px 20px;
+  border-right: 1px solid var(--line, rgba(255,255,255,0.12));
+  background: var(--panel, #262523);
+}
+
+.p-brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 0 8px 16px;
+  font-family: var(--mono);
+  font-size: max(var(--type-floor), 14px);
+  line-height: 1.1;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.p-brand b {
+  font-weight: 500;
+  letter-spacing: 0.16em;
+}
+
+.p-brand-mark {
+  display: block;
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  color: var(--ink);
+}
+
+.p-back-home {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 18px;
+  padding: 8px;
+  color: var(--muted);
+  font-family: var(--thai);
+  font-size: max(var(--type-floor), 12.5px);
+  border: 1px solid transparent;
+  border-radius: 3px;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.p-back-home:hover {
+  color: var(--ink);
+  background: var(--card);
+  border-color: var(--line);
+}
+
+.p-back-home svg {
+  color: var(--gold);
+}
+
+.p-side-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.p-side-nav a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  padding: 8px 12px;
+  color: var(--muted);
+  font-family: var(--thai);
+  font-size: max(var(--type-floor), 14px);
+  border-left: 2px solid transparent;
+  text-decoration: none;
+  transition: color 0.14s ease, background 0.14s ease;
+}
+
+.p-side-nav a:hover {
+  color: var(--ink);
+  background: var(--card);
+}
+
+.p-side-nav a.is-active {
+  color: var(--ink);
+  background: var(--card);
+  border-left-color: var(--gold);
+}
+
+.p-side-nav a.is-active svg {
+  color: var(--gold);
+}
+
+.p-sidebar-foot {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 14px 4px 0;
+  border-top: 1px solid var(--line);
+}
+
+.p-foot-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.p-foot-user b {
+  display: block;
+  font-family: var(--thai);
+  font-size: max(var(--type-floor), 13px);
+  font-weight: 500;
+  color: var(--ink);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.p-foot-user small {
+  display: block;
+  font-family: var(--mono);
+  font-size: max(var(--type-floor), 11px);
+  color: var(--muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.p-foot-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  display: block;
+}
+
+.p-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--ink);
+  background: var(--card);
+}
+
+.p-foot-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.p-lang-toggle {
+  display: inline-flex;
+  gap: 2px;
+}
+
+.p-lang-toggle button {
+  font-family: var(--mono);
+  font-size: max(var(--type-floor), 11px);
+  color: var(--muted);
+  padding: 3px 7px;
+  border: 1px solid var(--line);
+  background: transparent;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.p-lang-toggle button.active {
+  color: var(--ink);
+  border-color: var(--ink);
+}
+
+.p-main {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg, #201f1d);
+}
+
+.p-main > main {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Matching Journal Page Container & Headers */
+.p-page {
+  width: min(100%, 1500px);
+  margin: 0 auto;
+  padding: 16px 24px 32px;
+  box-sizing: border-box;
+}
+
+.p-page-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.p-page-head h1 {
+  font-family: var(--sans);
+  font-size: clamp(22px, 2.5vw, 28px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0;
+  color: var(--ink);
+}
+
+.p-page-head p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.p-head-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.p-primary-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: var(--ink);
+  color: var(--bg);
+  border: 1px solid var(--ink);
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.p-primary-btn:hover {
+  opacity: 0.9;
+}
+
+/* Metric summary cards matching Journal */
+.p-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.p-metric-card {
+  position: relative;
+  background: var(--panel, #262523);
+  border: 1px solid var(--line, rgba(255,255,255,0.12));
+  border-radius: 6px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.p-metric-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.p-metric-value {
+  font-family: var(--sans);
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 6px 0 2px;
+  color: var(--ink);
+}
+
+.p-metric-sub {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted);
+}
+
+/* Panels */
+.p-panel {
+  background: var(--panel, #262523);
+  border: 1px solid var(--line, rgba(255,255,255,0.12));
+  border-radius: 6px;
+  margin-bottom: 22px;
+  overflow: hidden;
+}
+
+.p-panel-head {
+  padding: 12px 18px;
+  border-bottom: 1px solid var(--line, rgba(255,255,255,0.12));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.p-panel-head h2 {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.p-panel-body {
+  padding: 16px 18px;
+}
+
+.p-count {
+  background: var(--card, rgba(255,255,255,0.08));
+  color: var(--ink);
+  font-family: var(--mono);
+  font-size: 10px;
+  padding: 1px 7px;
+  border-radius: 10px;
+}
+
+.p-panel .alloc {
+  margin-top: 0;
+  padding: 0;
+}
+
+.p-panel .alloc-head {
+  display: none;
+}
+
+.p-panel .alloc-list {
+  margin-top: 14px;
+}
+
+.p-panel .tx-row:last-child {
+  border-bottom: none;
+}
+
+.p-table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.p-table-scroll > table {
+  min-width: 100%;
+}
+
+.p-bottom-nav {
+  display: none;
+}
+
+@media (max-width: 1120px) {
+  .plan-app {
+    grid-template-columns: 210px minmax(0, 1fr);
+  }
+  .p-sidebar {
+    padding-inline: 12px;
+  }
+}
+
+@media (max-width: 860px) {
+  .plan-app {
+    display: block;
+  }
+
+  .p-sidebar {
+    display: none;
+  }
+
+  .p-main {
+    padding-bottom: 72px;
+  }
+
+  .p-bottom-nav {
+    position: fixed;
+    z-index: 80;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    border-top: 1px solid var(--soft);
+    background: var(--nav-bg, var(--panel));
+    backdrop-filter: blur(14px);
+  }
+
+  .p-bottom-nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    min-height: 60px;
+    padding: 8px 4px;
+    color: var(--muted);
+    font-family: var(--thai);
+    font-size: max(var(--type-floor), 11px);
+    text-decoration: none;
+  }
+
+  .p-bottom-nav a.is-active {
+    color: var(--ink);
+  }
+
+  .p-bottom-nav a.is-active svg {
+    color: var(--gold);
+  }
+}

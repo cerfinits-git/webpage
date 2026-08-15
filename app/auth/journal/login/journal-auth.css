@@ -1,0 +1,177 @@
+:root {
+  color-scheme: light;
+  --ja-ink: #17211b;
+  --ja-muted: #66716b;
+  --ja-line: #dfe5e1;
+  --ja-accent: #1f6b4f;
+  --ja-soft: #f2f6f3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.ja-page {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: #f7f9f7;
+  color: var(--ja-ink);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.ja-card {
+  width: min(100%, 410px);
+  padding: 34px;
+  border: 1px solid var(--ja-line);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, .94);
+  box-shadow: 0 22px 70px rgba(24, 43, 33, .08);
+}
+
+.ja-mark {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 22px;
+  border-radius: 14px;
+  background: var(--ja-ink);
+  color: white;
+  font-size: 18px;
+  font-weight: 750;
+}
+
+.ja-eyebrow {
+  margin: 0 0 8px;
+  color: var(--ja-accent);
+  font-size: 11px;
+  font-weight: 760;
+  letter-spacing: .14em;
+}
+
+.ja-card h1 {
+  margin: 0;
+  font-size: clamp(28px, 8vw, 36px);
+  letter-spacing: -.04em;
+  line-height: 1.08;
+}
+
+.ja-lead {
+  margin: 12px 0 26px;
+  color: var(--ja-muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.ja-form {
+  display: grid;
+  gap: 16px;
+}
+
+.ja-field {
+  display: grid;
+  gap: 7px;
+}
+
+.ja-field span {
+  color: #445049;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.ja-field input {
+  width: 100%;
+  min-height: 50px;
+  padding: 0 15px;
+  border: 1px solid var(--ja-line);
+  border-radius: 13px;
+  background: var(--ja-soft);
+  color: var(--ja-ink);
+  font: inherit;
+  font-size: 16px;
+  outline: none;
+  transition: border-color .16s ease, box-shadow .16s ease, background .16s ease;
+}
+
+.ja-field input:focus {
+  border-color: var(--ja-accent);
+  background: white;
+  box-shadow: 0 0 0 4px rgba(31, 107, 79, .11);
+}
+
+.ja-submit {
+  width: 100%;
+  min-height: 50px;
+  display: grid;
+  place-items: center;
+  margin-top: 4px;
+  border: 0;
+  border-radius: 14px;
+  background: var(--ja-ink);
+  color: white;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 720;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.ja-submit:hover {
+  background: #25352c;
+}
+
+.ja-submit:focus-visible {
+  outline: 3px solid rgba(31, 107, 79, .25);
+  outline-offset: 3px;
+}
+
+.ja-submit:disabled {
+  cursor: wait;
+  opacity: .62;
+}
+
+.ja-link {
+  margin-top: 0;
+}
+
+.ja-error {
+  margin: -3px 0 0;
+  padding: 10px 12px;
+  border-radius: 11px;
+  background: #fff0ee;
+  color: #9e3025;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.ja-footnote {
+  margin: 22px 0 0;
+  color: #87918b;
+  font-size: 11px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+@media (max-width: 520px) {
+  .ja-page {
+    padding: 14px;
+    align-items: end;
+  }
+
+  .ja-card {
+    padding: 28px 22px 24px;
+    border-radius: 24px 24px 18px 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ja-field input {
+    transition: none;
+  }
+}
