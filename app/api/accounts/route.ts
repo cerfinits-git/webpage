@@ -1,6 +1,6 @@
 import { randomUUID } from "crypto";
 import { NextResponse } from "next/server";
-import { readAccounts, writeAccounts } from "@/lib/store";
+import { deleteAccountById, readAccounts, writeAccounts } from "@/lib/store";
 import { getSessionUserId } from "@/lib/auth/session";
 import type { Account } from "@/lib/types";
 
