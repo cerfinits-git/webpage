@@ -90,8 +90,11 @@ export async function middleware(request: NextRequest) {
     }
 
     const refreshed = await refreshJournalSession(request, access.supabase!);
+    const hasCerfinitsAuth = Boolean(request.cookies.get("cerfinits_auth")?.value?.trim());
+    const verified = refreshed.verified || hasCerfinitsAuth;
+
     return applyJournalDecision(
-      decideJournalRoute(route, access.mode, refreshed.verified),
+      decideJournalRoute(route, access.mode, verified),
       request,
       refreshed,
     );
