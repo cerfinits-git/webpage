@@ -283,6 +283,87 @@ export default function JournalProvider({ children }: { children: React.ReactNod
   // correct for the language active at the moment hydration runs.
   }, [captureDogfood, captureDogfoodIncident]);
 
+  // Fetch remote accounts from Supabase and sync with local state
+  useEffect(() => {
+    if (!isHydrated) return;
+
+    fetch("/api/accounts")
+      .then((res) => res.json())
+      .then((remoteList) => {
+        if (!Array.isArray(remoteList) || remoteList.length === 0) return;
+
+        const mappedRemote: TradingAccount[] = remoteList.map((a: any) => ({
+          id: String(a.id),
+          name: String(a.name || a.account_name || "Account"),
+          broker: String(a.bank || a.bank_name || "cTrader"),
+          externalAccountId: a.note && a.note !== "Trading Journal Account" ? a.note : null,
+          baseCurrency: "USD",
+          reportingTimezone: "Asia/Bangkok",
+          defaultRiskAmount: a.openingBalance ? Number(a.openingBalance) : undefined,
+        }));
+
+        const currentAccounts = state.accounts;
+        const currentTrades = state.trades;
+
+        // If local only has the placeholder ctrader-demo-01 with 0 trades and remote has custom accounts, replace it
+        const hasOnlyDefaultAccount =
+          currentAccounts.length === 1 &&
+          currentAccounts[0].id === DEFAULT_JOURNAL_ACCOUNT.id &&
+          !currentTrades.some((t) => t.accountId === DEFAULT_JOURNAL_ACCOUNT.id) &&
+          !mappedRemote.some((r) => r.id === DEFAULT_JOURNAL_ACCOUNT.id);
+
+        let nextAccounts: TradingAccount[];
+        let nextActiveId = state.activeAccountId;
+
+        if (hasOnlyDefaultAccount) {
+          nextAccounts = mappedRemote;
+          nextActiveId = mappedRemote[0]?.id || "";
+        } else {
+          const existingIds = new Set(currentAccounts.map((a) => a.id));
+          const toAdd = mappedRemote.filter((r) => !existingIds.has(r.id));
+          if (toAdd.length === 0) return;
+          nextAccounts = [...currentAccounts, ...toAdd];
+          if (!existingIds.has(nextActiveId)) {
+            nextActiveId = nextAccounts[0]?.id || "";
+          }
+        }
+
+        const semantic = validateJournalSnapshot({
+          trades: currentTrades,
+          accounts: nextAccounts,
+          activeAccountId: nextActiveId,
+        });
+
+        if (semantic.valid) {
+          const nextRevision = revisionRef.current + 1;
+          const serialized = serializeJournalPayload(
+            semantic.snapshot.trades,
+            nextRevision,
+            false,
+            semantic.snapshot.accounts,
+            semantic.snapshot.activeAccountId,
+          );
+          window.localStorage.setItem(JOURNAL_STORAGE_KEY, serialized);
+          const verified = loadJournalPayload(window.localStorage.getItem(JOURNAL_STORAGE_KEY));
+          if (verified.kind === "ready") {
+            dispatch({
+              type: "replace",
+              trades: currentTrades,
+              accounts: semantic.snapshot.accounts,
+              activeAccountId: semantic.snapshot.activeAccountId,
+              label: "Sync accounts from Supabase",
+            });
+            revisionRef.current = nextRevision;
+            setRevision(nextRevision);
+            setChecksum(verified.checksum);
+          }
+        }
+      })
+      .catch((err) => {
+        console.warn("Failed to load accounts from Supabase:", err);
+      });
+  }, [isHydrated]);
+
   const setRange = useCallback((nextRange: JournalRange) => {
     setRangeState(nextRange);
     try {

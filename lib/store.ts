@@ -22,11 +22,15 @@ function getSupabaseClient() {
 
 // 1. Accounts
 
-export async function readAccounts(): Promise<Account[]> {
+export async function readAccounts(userId?: string | null): Promise<Account[]> {
   const client = getSupabaseClient();
   if (!client) return [];
   try {
-    const { data, error } = await client.from("accounts").select("*");
+    let query = client.from("accounts").select("*");
+    if (userId) {
+      query = query.or(`user_id.eq.${userId},user_id.is.null`);
+    }
+    const { data, error } = await query;
     if (error || !data) return [];
     return data.map((row: any) => ({
       id: String(row.id),
@@ -39,6 +43,16 @@ export async function readAccounts(): Promise<Account[]> {
   } catch (err) {
     console.error("Error reading accounts from Supabase:", err);
     return [];
+  }
+}
+
+export async function deleteAccountById(id: string): Promise<void> {
+  const client = getSupabaseClient();
+  if (!client) return;
+  try {
+    await client.from("accounts").delete().eq("id", id);
+  } catch (err) {
+    console.error("Error deleting account from Supabase:", err);
   }
 }
 

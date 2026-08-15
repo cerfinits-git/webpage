@@ -32,7 +32,7 @@ function validate(body: any): { error?: string; fields?: Partial<Account> } {
 
 export async function GET() {
   const userId = await getSessionUserId();
-  const list = await readAccounts();
+  const list = await readAccounts(userId);
   return NextResponse.json(list);
 }
 
@@ -92,11 +92,8 @@ export async function PATCH(req: Request) {
 }
 
 export async function DELETE(req: Request) {
-  const userId = await getSessionUserId();
   const id = new URL(req.url).searchParams.get("id");
   if (!id) return bad("ระบุ id");
-  const list = await readAccounts();
-  const next = list.filter((a) => a.id !== id);
-  await writeAccounts(next, userId);
+  await deleteAccountById(id);
   return NextResponse.json({ ok: true });
 }

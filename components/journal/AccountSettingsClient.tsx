@@ -94,6 +94,7 @@ export default function AccountSettingsClient({ onMessage }: { onMessage: (messa
   const remove = async () => {
     try {
       await fetch(`/api/ctrader/accounts?tradingAccountId=${activeAccountId}`, { method: "DELETE" });
+      await fetch(`/api/accounts?id=${activeAccountId}`, { method: "DELETE" });
     } catch (e) {
       console.error("Failed to clear backend data for account", e);
     }
