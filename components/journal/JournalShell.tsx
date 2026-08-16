@@ -1,8 +1,10 @@
+"use client";
+
 import JournalNav from "./JournalNav";
 import JournalProvider from "./JournalProvider";
 import { JournalStorageBadge, JournalStorageNotice } from "./JournalStorageStatus";
 import { JournalThemeShell, JournalThemeToggle } from "./JournalTheme";
-import { logout } from "@/lib/actions/auth";
+import { clientSignOut } from "@/lib/auth/client-logout";
 import { T } from "@/components/site/LangContext";
 import BackHomeLink from "./BackHomeLink";
 
@@ -27,11 +29,13 @@ export default function JournalShell({
               <JournalThemeToggle />
               <JournalStorageBadge />
               {user ? (
-                <form action={logout}>
-                  <button className="j-signout" type="submit">
-                    <T th="ออกจากระบบ" en="Sign out" />
-                  </button>
-                </form>
+                <button
+                  className="j-signout"
+                  type="button"
+                  onClick={() => clientSignOut()}
+                >
+                  <T th="ออกจากระบบ" en="Sign out" />
+                </button>
               ) : null}
             </div>
           </div>

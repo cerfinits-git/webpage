@@ -196,6 +196,29 @@ body:has(.journal-app[data-theme="light"]) {
 .j-foot-user > div { display: flex; flex-direction: column; min-width: 0; }
 .j-foot-user b { font-size: 12px; color: var(--j-ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .j-foot-user small { font-size: 11px; color: var(--j-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.j-foot-signout {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px !important;
+  min-height: 28px !important;
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  border: 1px solid var(--j-line);
+  background: transparent;
+  color: var(--j-muted);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.15s ease;
+  padding: 0;
+  margin-left: auto;
+}
+.j-foot-signout:hover {
+  border-color: var(--j-negative, #f43f5e) !important;
+  color: var(--j-negative, #f43f5e) !important;
+  background: var(--j-down-tint, rgba(244, 63, 94, 0.08)) !important;
+}
 .j-foot-controls { display: flex; align-items: center; justify-content: space-between; gap: 8px; width: 100%; }
 .j-sidebar-foot form { margin: 0; }
 .j-sidebar-foot button {

@@ -2,7 +2,8 @@ export type JournalIconName =
   | "overview" | "trades" | "analytics" | "playbook" | "settings"
   | "upload" | "plus" | "search" | "calendar" | "account" | "chevron"
   | "dots" | "arrow-left" | "arrow-right" | "check" | "close" | "download"
-  | "sun" | "moon" | "chart" | "trend" | "target" | "grid" | "split" | "zap";
+  | "sun" | "moon" | "chart" | "trend" | "target" | "grid" | "split" | "zap"
+  | "signout" | "logout";
 
 export default function JournalIcon({ name, size = 20 }: { name: JournalIconName; size?: number }) {
   const common = { fill: "none", stroke: "currentColor", strokeWidth: 1.6, strokeLinecap: "round" as const, strokeLinejoin: "round" as const };
@@ -31,6 +32,7 @@ export default function JournalIcon({ name, size = 20 }: { name: JournalIconName
         {name === "close" ? <path d="M5 5l14 14M19 5L5 19"/> : null}
         {name === "sun" ? <><circle cx="12" cy="12" r="4.5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1"/></> : null}
         {name === "moon" ? <path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"/> : null}
+        {name === "signout" || name === "logout" ? <><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></> : null}
       </g>
     </svg>
   );

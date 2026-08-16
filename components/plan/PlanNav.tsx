@@ -8,6 +8,8 @@ import LangToggle from "@/components/site/LangToggle";
 import { JournalThemeToggle } from "@/components/journal/JournalTheme";
 import JournalIcon from "@/components/journal/JournalIcon";
 
+import { clientSignOut } from "@/lib/auth/client-logout";
+
 const NAV = [
   { href: "/plan/portfolio", th: "พอร์ต", en: "Portfolio", icon: "overview" as const },
 ];
@@ -73,15 +75,27 @@ export default function PlanNav({
                   objectFit: "cover",
                   border: "1px solid var(--j-line)",
                   display: "block",
+                  flexShrink: 0,
                 }}
               />
             ) : (
-              <span className="j-avatar">{initial}</span>
+              <span className="j-avatar" style={{ flexShrink: 0 }}>{initial}</span>
             )}
-            <div>
+            <div style={{ minWidth: 0, flex: 1 }}>
               <b>{user ? user.name : "Local preview"}</b>
               <small>{user ? user.username : "This device only"}</small>
             </div>
+            {user ? (
+              <button
+                type="button"
+                className="j-foot-signout"
+                onClick={() => clientSignOut()}
+                title="ออกจากระบบ"
+                aria-label="Sign out"
+              >
+                <JournalIcon name="signout" size={14} />
+              </button>
+            ) : null}
           </div>
           <div className="j-foot-controls">
             <LangToggle className="j-lang-toggle" />

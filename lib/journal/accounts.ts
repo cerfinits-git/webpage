@@ -64,7 +64,7 @@ export function inferJournalAccounts(trades: JournalTrade[]) {
   if (ids.length === 0) return [];
   return ids.map((id): TradingAccount => ({
     id,
-    name: id,
+    name: id === DEFAULT_JOURNAL_ACCOUNT.id ? DEFAULT_JOURNAL_ACCOUNT.name : id,
     broker: "cTrader",
     externalAccountId: null,
     baseCurrency: "USD",

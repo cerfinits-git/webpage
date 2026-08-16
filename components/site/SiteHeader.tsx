@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { T, useLang } from "./LangContext";
 import { useTheme } from "./ThemeContext";
 import LogoMark from "@/components/LogoMark";
-import { logout } from "@/lib/actions/auth";
+import { clientSignOut } from "@/lib/auth/client-logout";
 
 export interface HeaderUser {
   username?: string;
@@ -529,10 +529,14 @@ export default function SiteHeader({
                       <T th="พอร์ตลงทุน (Portfolio)" en="Portfolio" />
                     </Link>
 
-                    <form action={logout} className="nav-account-signout" style={{ marginTop: "6px", paddingTop: "6px" }}>
+                    <div className="nav-account-signout" style={{ marginTop: "6px", paddingTop: "6px" }}>
                       <button
-                        type="submit"
+                        type="button"
                         role="menuitem"
+                        onClick={() => {
+                          setAccountOpen(false);
+                          clientSignOut();
+                        }}
                         style={{
                           display: "flex",
                           alignItems: "center",
@@ -541,6 +545,12 @@ export default function SiteHeader({
                           borderRadius: "6px",
                           fontSize: "13px",
                           width: "100%",
+                          background: "transparent",
+                          border: "none",
+                          color: "var(--ink)",
+                          cursor: "pointer",
+                          textAlign: "left",
+                          fontFamily: "inherit",
                         }}
                       >
                         <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -550,7 +560,7 @@ export default function SiteHeader({
                         </svg>
                         <T th="ออกจากระบบ" en="Sign out" />
                       </button>
-                    </form>
+                    </div>
                   </div>
                 )}
               </div>
@@ -819,11 +829,17 @@ export default function SiteHeader({
                 <Link href="/plan/portfolio" className="btn btn-primary" onClick={() => setMenuOpen(false)}>
                   <T th="พอร์ตลงทุน (Portfolio)" en="Portfolio" />
                 </Link>
-                <form action={logout}>
-                  <button type="submit" className="btn" style={{ width: "100%" }}>
-                    <T th="ออกจากระบบ" en="Sign out" />
-                  </button>
-                </form>
+                <button
+                  type="button"
+                  className="btn"
+                  style={{ width: "100%" }}
+                  onClick={() => {
+                    setMenuOpen(false);
+                    clientSignOut();
+                  }}
+                >
+                  <T th="ออกจากระบบ" en="Sign out" />
+                </button>
               </>
             ) : (
               <button

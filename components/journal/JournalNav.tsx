@@ -3,12 +3,12 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import LogoMark from "@/components/LogoMark";
-import { logout } from "@/lib/actions/auth";
+import { clientSignOut } from "@/lib/auth/client-logout";
 import { buildJournalHref } from "@/lib/journal/range";
 import JournalIcon, { type JournalIconName } from "./JournalIcon";
 import { JournalThemeToggle } from "./JournalTheme";
 import { useJournal } from "./JournalProvider";
-import { T } from "@/components/site/LangContext";
+import { T, useLang } from "@/components/site/LangContext";
 import LangToggle from "@/components/site/LangToggle";
 
 const NAV: { href: string; th: string; en: string; icon: JournalIconName }[] = [
@@ -40,6 +40,7 @@ export default function JournalNav({
 }) {
   const path = usePathname();
   const { range } = useJournal();
+  const { lang } = useLang();
 
   const userInitial = user?.name
     ? user.name.charAt(0).toUpperCase()
@@ -74,15 +75,26 @@ export default function JournalNav({
                 src={user.picture}
                 alt={user.name}
                 referrerPolicy="no-referrer"
-                style={{ width: 30, height: 30, borderRadius: "50%", objectFit: "cover", border: "1px solid var(--j-line)", display: "block" }}
+                style={{ width: 30, height: 30, borderRadius: "50%", objectFit: "cover", border: "1px solid var(--j-line)", display: "block", flexShrink: 0 }}
               />
             ) : (
-              <span className="j-avatar">{userInitial}</span>
+              <span className="j-avatar" style={{ flexShrink: 0 }}>{userInitial}</span>
             )}
-            <div>
+            <div style={{ minWidth: 0, flex: 1 }}>
               <b>{user ? user.name : "Local preview"}</b>
               <small>{user ? user.username : "This device only"}</small>
             </div>
+            {user ? (
+              <button
+                type="button"
+                className="j-foot-signout"
+                onClick={() => clientSignOut()}
+                title={lang === "en" ? "Sign out & clear local session" : "ออกจากระบบและล้างข้อมูล"}
+                aria-label={lang === "en" ? "Sign out" : "ออกจากระบบ"}
+              >
+                <JournalIcon name="signout" size={14}/>
+              </button>
+            ) : null}
           </div>
           <div className="j-foot-controls">
             <LangToggle className="j-lang-toggle"/>
